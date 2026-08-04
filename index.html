@@ -1,212 +1,463 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Daniel Asekhame Foundation | Hope • Compassion • Sustainable Impact</title>
+<title>Daniel Asekhame Foundation | Building Hope. Empowering Communities.</title>
 
-<meta name="description" content="Official website of the Daniel Asekhame Foundation, dedicated to humanitarian service, education, healthcare, youth empowerment and sustainable community development.">
+<meta name="description"
+content="Official website of the Daniel Asekhame Foundation dedicated to humanitarian services, education, healthcare, youth empowerment, women empowerment and sustainable community development.">
 
-<meta name="keywords" content="Daniel Asekhame Foundation, charity, NGO, education, healthcare, empowerment, Nigeria, humanitarian">
+<meta name="keywords"
+content="Daniel Asekhame Foundation, NGO, Charity, Benin City, Edo State, Youth Empowerment, Women Empowerment, Community Development">
 
-<meta name="author" content="ACE™">
+<meta name="author" content="Daniel Asekhame Foundation">
+
+<meta name="theme-color" content="#0b4f9c">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
 
 <style>
 
+:root{
+
+--primary:#0b4f9c;
+--secondary:#f4b400;
+--dark:#183153;
+--light:#f8fbff;
+--text:#333;
+--white:#ffffff;
+
+}
+
 *{
+
 margin:0;
 padding:0;
 box-sizing:border-box;
-}
 
-body{
-font-family:Arial,Helvetica,sans-serif;
-background:#ffffff;
-color:#333;
-line-height:1.7;
 }
 
 html{
+
 scroll-behavior:smooth;
+
+}
+
+body{
+
+font-family:'Poppins',sans-serif;
+background:#fff;
+color:var(--text);
+line-height:1.7;
+
 }
 
 img{
+
 max-width:100%;
 display:block;
+
 }
 
 a{
+
 text-decoration:none;
-color:inherit;
+
 }
 
 .container{
+
 width:92%;
-max-width:1150px;
+max-width:1200px;
 margin:auto;
+
 }
 
 header{
-position:sticky;
+
+position:fixed;
 top:0;
-background:#ffffff;
-box-shadow:0 2px 10px rgba(0,0,0,.08);
-z-index:1000;
+left:0;
+right:0;
+background:#fff;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+z-index:999;
+
 }
 
-nav{
+.navbar{
+
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:16px 0;
+padding:18px 0;
+
 }
 
 .logo{
-font-size:1.35rem;
-font-weight:bold;
-color:#0b5fa5;
+
+font-size:1.45rem;
+font-weight:800;
+color:var(--primary);
+
+}
+
+.logo span{
+
+color:var(--secondary);
+
 }
 
 nav ul{
+
 display:flex;
+gap:28px;
 list-style:none;
-gap:20px;
+
 }
 
-nav li{
-font-size:.95rem;
+nav a{
+
+color:#333;
+font-weight:500;
+transition:.3s;
+
 }
 
 nav a:hover{
-color:#0b5fa5;
+
+color:var(--primary);
+
+}
+
+.mobile-menu{
+
+display:none;
+font-size:30px;
+cursor:pointer;
+
 }
 
 .hero{
-background:linear-gradient(rgba(11,95,165,.80),rgba(11,95,165,.80));
+
+margin-top:82px;
+
+min-height:100vh;
+
+display:flex;
+
+align-items:center;
+
+background:
+
+linear-gradient(rgba(11,79,156,.78),rgba(11,79,156,.78)),
+
+url("https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1600&q=80");
+
+background-size:cover;
+background-position:center;
+
 color:#fff;
-padding:90px 0;
-text-align:center;
+
+}
+
+.hero-content{
+
+max-width:700px;
+
 }
 
 .hero h1{
-font-size:2.2rem;
-margin-bottom:20px;
+
+font-size:3.2rem;
+line-height:1.2;
+margin-bottom:25px;
+
 }
 
 .hero p{
-max-width:760px;
-margin:auto;
-font-size:1.05rem;
-margin-bottom:30px;
+
+font-size:1.1rem;
+margin-bottom:35px;
+
 }
 
 .btn{
+
 display:inline-block;
-padding:14px 30px;
-background:#f4b400;
-color:#222;
-font-weight:bold;
-border-radius:6px;
+
+padding:15px 32px;
+
+border-radius:50px;
+
+font-weight:600;
+
 transition:.3s;
+
 }
 
-.btn:hover{
-background:#d99d00;
+.btn-primary{
+
+background:var(--secondary);
+
+color:#fff;
+
+}
+
+.btn-primary:hover{
+
+transform:translateY(-3px);
+
+}
+
+.btn-outline{
+
+border:2px solid #fff;
+
+color:#fff;
+
+margin-left:15px;
+
+}
+
+.btn-outline:hover{
+
+background:#fff;
+
+color:var(--primary);
+
 }
 
 section{
-padding:70px 0;
+
+padding:90px 0;
+
 }
 
 .section-title{
-font-size:2rem;
+
 text-align:center;
-margin-bottom:20px;
-color:#0b5fa5;
+
+margin-bottom:55px;
+
 }
 
-.section-text{
-max-width:820px;
+.section-title h2{
+
+font-size:2.3rem;
+
+color:var(--primary);
+
+margin-bottom:12px;
+
+}
+
+.section-title p{
+
+max-width:700px;
+
 margin:auto;
-text-align:center;
-margin-bottom:40px;
+
+color:#666;
+
 }
 
 .grid{
+
 display:grid;
-gap:25px;
-}
 
-.two{
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-}
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 
-.three{
-grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:30px;
+
 }
 
 .card{
+
 background:#fff;
-padding:25px;
-border-radius:10px;
-box-shadow:0 5px 18px rgba(0,0,0,.08);
+
+padding:35px;
+
+border-radius:20px;
+
+box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+transition:.35s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
 }
 
 .card h3{
+
+color:var(--primary);
+
 margin-bottom:15px;
-color:#0b5fa5;
+
 }
 
-.focus{
+.light-section{
+
+background:var(--light);
+
+}
+
+.icon{
+
+width:72px;
+height:72px;
+
+margin:0 auto 20px;
+
+border-radius:50%;
+
+background:var(--primary);
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:32px;
+
+color:#fff;
+
+}
+
+.center{
+
 text-align:center;
+
 }
 
-.focus h4{
-margin:15px 0;
-color:#0b5fa5;
+.stats{
+
+background:var(--primary);
+
+color:#fff;
+
+}
+
+.stats-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+gap:30px;
+
+text-align:center;
+
+}
+
+.stats h3{
+
+font-size:2.6rem;
+
+color:var(--secondary);
+
 }
 
 .cta{
-background:#0b5fa5;
-color:white;
+
+background:var(--secondary);
+
+color:#fff;
+
 text-align:center;
-}
 
-.cta .btn{
-margin-top:20px;
-}
-
-.contact{
-background:#f7f7f7;
 }
 
 footer{
-background:#1b1b1b;
-color:#ddd;
+
+background:#0c2745;
+
+color:#fff;
+
+padding:60px 0 30px;
+
+}
+
+.footer-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+gap:35px;
+
+}
+
+.footer-bottom{
+
+margin-top:35px;
+
+padding-top:20px;
+
+border-top:1px solid rgba(255,255,255,.2);
+
 text-align:center;
-padding:30px 20px;
-font-size:.9rem;
+
+font-size:.92rem;
+
+}
+
+.footer-bottom a{
+
+color:#f4b400;
+
+font-weight:600;
+
 }
 
 @media(max-width:768px){
 
 nav{
-flex-direction:column;
-gap:15px;
+
+display:none;
+
 }
 
-nav ul{
-flex-wrap:wrap;
-justify-content:center;
+.mobile-menu{
+
+display:block;
+
 }
 
 .hero h1{
-font-size:1.8rem;
+
+font-size:2.3rem;
+
 }
 
-.section-title{
-font-size:1.7rem;
+.btn{
+
+display:block;
+
+text-align:center;
+
+margin-bottom:15px;
+
+}
+
+.btn-outline{
+
+margin-left:0;
+
 }
 
 }
@@ -219,25 +470,23 @@ font-size:1.7rem;
 
 <header>
 
-<div class="container">
-
-<nav>
+<div class="container navbar">
 
 <div class="logo">
-Daniel Asekhame Foundation
+
+DAF <span>Foundation</span>
+
 </div>
+
+<nav>
 
 <ul>
 
 <li><a href="#about">About</a></li>
 
-<li><a href="#mission">Mission</a></li>
-
 <li><a href="#focus">Focus</a></li>
 
-<li><a href="#founder">Founder</a></li>
-
-<li><a href="#support">Support</a></li>
+<li><a href="#programmes">Programmes</a></li>
 
 <li><a href="#contact">Contact</a></li>
 
@@ -247,24 +496,46 @@ Daniel Asekhame Foundation
 
 </nav>
 
+<div class="mobile-menu">
+
+☰
+
+</div>
+
 </div>
 
 </header>
 
 <section class="hero">
 
-<div class="container">
+<div class="container hero-content">
 
 <h1>
-Building Stronger Communities Through Compassion and Sustainable Action
+
+Building Hope.<br>
+
+Empowering Communities.<br>
+
+Transforming Lives.
+
 </h1>
 
 <p>
-The Daniel Asekhame Foundation is committed to improving lives by supporting vulnerable communities through education, healthcare, youth empowerment, humanitarian assistance and strategic community development initiatives.
+
+The Daniel Asekhame Foundation is committed to creating sustainable opportunities through education, healthcare, humanitarian assistance, youth and women empowerment, anti-human trafficking initiatives and community development.
+
 </p>
 
-<a href="#support" class="btn">
+<a href="#donate" class="btn btn-primary">
+
 Donate Now
+
+</a>
+
+<a href="#about" class="btn btn-outline">
+
+Learn More
+
 </a>
 
 </div>
@@ -275,30 +546,38 @@ Donate Now
 
 <div class="container">
 
-<h2 class="section-title">
-About the Foundation
-</h2>
+<div class="section-title">
 
-<p class="section-text">
-The Daniel Asekhame Foundation exists to inspire hope through practical action. Working alongside communities, volunteers, partners and well-wishers, the Foundation develops initiatives that promote dignity, opportunity and lasting social impact. Every programme is guided by integrity, transparency and responsible stewardship of resources.
+<h2>About the Foundation</h2>
+
+<p>
+The Daniel Asekhame Foundation is a humanitarian organisation committed to improving lives, strengthening communities and creating sustainable opportunities through compassion, service and strategic partnerships.
 </p>
 
 </div>
 
-</section>
+<div class="grid">
 
-<section id="mission">
+<div class="card">
 
-<div class="container">
+<h3>About Us</h3>
 
-<div class="grid two">
+<p>
+The Foundation exists to improve the quality of life of vulnerable individuals and communities through impactful programmes in education, healthcare, youth empowerment, women empowerment, humanitarian assistance, anti-human trafficking advocacy, research support and community development.
+</p>
+
+<p style="margin-top:15px;">
+Working alongside government agencies, development partners, corporate organisations, civil society and local communities, the Foundation seeks practical and sustainable solutions that produce measurable social impact.
+</p>
+
+</div>
 
 <div class="card">
 
 <h3>Our Vision</h3>
 
 <p>
-To help build communities where every individual has the opportunity to live with dignity, realise their potential and contribute meaningfully to society.
+To build resilient, inclusive and prosperous communities where every individual has access to opportunities that promote dignity, hope, wellbeing and sustainable development.
 </p>
 
 </div>
@@ -308,7 +587,101 @@ To help build communities where every individual has the opportunity to live wit
 <h3>Our Mission</h3>
 
 <p>
-To deliver sustainable humanitarian programmes that improve lives through education, healthcare, empowerment, partnerships and community-focused development.
+To transform lives through innovative humanitarian programmes, strategic partnerships and community-driven initiatives that empower people, strengthen families and foster lasting social and economic development.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="light-section">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Our Core Values</h2>
+
+<p>
+Every programme and every partnership is guided by enduring values that define who we are and how we serve.
+</p>
+
+</div>
+
+<div class="grid">
+
+<div class="card center">
+
+<div class="icon">❤</div>
+
+<h3>Compassion</h3>
+
+<p>
+Serving people with empathy, kindness and genuine concern.
+</p>
+
+</div>
+
+<div class="card center">
+
+<div class="icon">✓</div>
+
+<h3>Integrity</h3>
+
+<p>
+Maintaining honesty, accountability, transparency and ethical leadership.
+</p>
+
+</div>
+
+<div class="card center">
+
+<div class="icon">★</div>
+
+<h3>Excellence</h3>
+
+<p>
+Pursuing quality, professionalism and measurable impact in everything we do.
+</p>
+
+</div>
+
+<div class="card center">
+
+<div class="icon">🤝</div>
+
+<h3>Collaboration</h3>
+
+<p>
+Working together with communities and partners to achieve sustainable outcomes.
+</p>
+
+</div>
+
+<div class="card center">
+
+<div class="icon">🌱</div>
+
+<h3>Innovation</h3>
+
+<p>
+Developing practical solutions that respond to emerging social challenges.
+</p>
+
+</div>
+
+<div class="card center">
+
+<div class="icon">🌍</div>
+
+<h3>Inclusiveness</h3>
+
+<p>
+Creating opportunities that embrace diversity and leave no one behind.
 </p>
 
 </div>
@@ -323,68 +696,110 @@ To deliver sustainable humanitarian programmes that improve lives through educat
 
 <div class="container">
 
-<h2 class="section-title">
-Areas of Focus
-</h2>
+<div class="section-title">
 
-<div class="grid three">
-
-<div class="card focus">
-
-<h4>Education</h4>
+<h2>Areas of Focus</h2>
 
 <p>
-Supporting learning opportunities and educational development.
+Our work is centred on programmes that strengthen individuals, families and communities through sustainable development.
 </p>
 
 </div>
 
-<div class="card focus">
+<div class="grid">
 
-<h4>Healthcare</h4>
+<div class="card center">
+
+<div class="icon">🎓</div>
+
+<h3>Education</h3>
 
 <p>
-Promoting access to healthcare and community wellbeing.
+Scholarships, educational support, school improvement initiatives and lifelong learning opportunities.
 </p>
 
 </div>
 
-<div class="card focus">
+<div class="card center">
 
-<h4>Youth Empowerment</h4>
+<div class="icon">🏥</div>
+
+<h3>Healthcare</h3>
 
 <p>
-Equipping young people with skills, opportunities and hope.
+Medical outreach programmes, health awareness campaigns and access to quality healthcare services.
 </p>
 
 </div>
 
-<div class="card focus">
+<div class="card center">
 
-<h4>Community Development</h4>
+<div class="icon">👩</div>
+
+<h3>Women Empowerment</h3>
 
 <p>
-Supporting sustainable initiatives that strengthen local communities.
+Skills development, entrepreneurship support, leadership training and economic empowerment.
 </p>
 
 </div>
 
-<div class="card focus">
+<div class="card center">
 
-<h4>Humanitarian Support</h4>
+<div class="icon">🧑</div>
+
+<h3>Youth Empowerment</h3>
 
 <p>
-Providing assistance to vulnerable individuals and families during times of need.
+Leadership development, mentoring, entrepreneurship, innovation and career readiness.
 </p>
 
 </div>
 
-<div class="card focus">
+<div class="card center">
 
-<h4>Partnerships</h4>
+<div class="icon">🛡</div>
+
+<h3>Anti-Human Trafficking</h3>
 
 <p>
-Working collaboratively with organisations and individuals to achieve lasting social impact.
+Awareness, advocacy, prevention initiatives and survivor support programmes.
+</p>
+
+</div>
+
+<div class="card center">
+
+<div class="icon">❤️</div>
+
+<h3>Humanitarian Services</h3>
+
+<p>
+Emergency relief, welfare support and compassionate assistance for vulnerable communities.
+</p>
+
+</div>
+
+<div class="card center">
+
+<div class="icon">🔬</div>
+
+<h3>Research Funding</h3>
+
+<p>
+Supporting research and innovation that contribute to sustainable social development.
+</p>
+
+</div>
+
+<div class="card center">
+
+<div class="icon">🏘</div>
+
+<h3>Community Development</h3>
+
+<p>
+Projects that strengthen local communities through partnerships, infrastructure and inclusive development.
 </p>
 
 </div>
@@ -395,33 +810,206 @@ Working collaboratively with organisations and individuals to achieve lasting so
 
 </section>
 
-<section id="founder">
+<section id="programmes" class="light-section">
 
 <div class="container">
 
-<h2 class="section-title">
-Founder & President
-</h2>
+<div class="section-title">
 
-<div class="grid two">
+<h2>2027–2028 Strategic Work Programme</h2>
+
+<p>
+Our strategic work programme is designed to deliver sustainable, measurable and community-centred impact across Edo State and beyond through carefully planned humanitarian interventions.
+</p>
+
+</div>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>Education & Learning</h3>
+
+<p>
+Expand access to quality education through scholarships, educational materials, digital learning opportunities, school infrastructure support and mentorship programmes.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Healthcare & Wellness</h3>
+
+<p>
+Implement medical outreaches, preventive healthcare campaigns, maternal and child health initiatives, community health education and wellness programmes.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Economic Empowerment</h3>
+
+<p>
+Equip women and young people with vocational skills, entrepreneurship training, business mentoring and opportunities for sustainable livelihoods.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Strategic Partnerships</h3>
+
+<p>
+Strengthen collaboration with governments, development partners, NGOs, private sector organisations and community leaders to maximise long-term impact.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Annual Signature Programmes</h2>
+
+<p>
+Our flagship programmes are designed to become annual platforms for transformation, empowerment and sustainable development.
+</p>
+
+</div>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>Educational Support Programme</h3>
+
+<p>
+Scholarships, learning resources, mentorship, career guidance and school improvement initiatives.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Community Health Outreach</h3>
+
+<p>
+Medical screening, health awareness campaigns, preventive healthcare education and access to basic medical services.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Women Empowerment Initiative</h3>
+
+<p>
+Skills acquisition, enterprise development, financial literacy and leadership programmes that promote economic independence.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Youth Leadership Development</h3>
+
+<p>
+Leadership training, innovation, entrepreneurship, civic responsibility and mentorship for the next generation of changemakers.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="stats" id="impact">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2 style="color:#ffffff;">Expected Impact</h2>
+
+<p style="color:#dbe9ff;">
+Creating measurable change through sustainable humanitarian programmes.
+</p>
+
+</div>
+
+<div class="stats-grid">
 
 <div>
 
-<img src="assets/images/president.jpg"
-alt="Hon. Daniel Asekhame">
+<h3>10,000+</h3>
+
+<p>Lives positively impacted</p>
 
 </div>
 
 <div>
 
+<h3>100+</h3>
+
+<p>Community programmes</p>
+
+</div>
+
+<div>
+
+<h3>500+</h3>
+
+<p>Youth and women empowered</p>
+
+</div>
+
+<div>
+
+<h3>50+</h3>
+
+<p>Strategic partnerships</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="grid">
+
+<div class="card">
+
+<h3>Meet Our Youth Ambassador</h3>
+
 <p>
-The Foundation is led by <strong>Hon. Daniel Asekhame</strong>, whose commitment to humanitarian service and sustainable community development continues to inspire programmes that create meaningful and lasting impact.
+The Foundation's Youth Ambassador Programme nurtures responsible, ethical and visionary young leaders who inspire positive change within their communities while supporting the Foundation's mission and humanitarian activities.
 </p>
 
-<br>
+</div>
+
+<div class="card">
+
+<h3>Founder & President</h3>
 
 <p>
-Through compassion, responsible leadership and collaboration, the Foundation seeks to improve lives while encouraging citizens, institutions and development partners to participate in building stronger communities.
+<strong>Hon. Daniel Asekhame</strong> provides the leadership and strategic direction of the Foundation, championing initiatives that improve lives, empower communities and promote sustainable social development through service, compassion and collaboration.
 </p>
 
 </div>
@@ -432,71 +1020,125 @@ Through compassion, responsible leadership and collaboration, the Foundation see
 
 </section>
 
-<section id="support" class="cta">
+<section class="cta">
 
 <div class="container">
 
-<h2>
-Get Involved
-</h2>
+<h2>Get Involved</h2>
 
 <p>
-Every contribution helps create opportunities, restore hope and improve lives.
+Together we can build stronger communities, create opportunities and transform lives. Whether you choose to donate, volunteer or become a strategic partner, your support makes a meaningful difference.
 </p>
 
 <br>
 
-<a href="#" class="btn">
-Donate Now
-</a>
+<a href="#donate" class="btn btn-primary">Donate Now</a>
 
-&nbsp;&nbsp;
-
-<a href="#contact" class="btn">
-Volunteer
-</a>
-
-&nbsp;&nbsp;
-
-<a href="#contact" class="btn">
-Partner With Us
-</a>
+<a href="#contact" class="btn btn-outline">Partner With Us</a>
 
 </div>
 
 </section>
 
-<section id="contact" class="contact">
+<section id="donate">
 
 <div class="container">
 
-<h2 class="section-title">
-Contact Us
-</h2>
+<div class="section-title">
 
-<p class="section-text">
+<h2>Support Our Mission</h2>
 
-<strong>Daniel Asekhame Foundation</strong>
-
-<br><br>
-
-We welcome enquiries, partnerships, volunteers and donations that advance our humanitarian mission.
-
-<br><br>
-
-Email:
-info@danielasekhamefoundation.org
-
-<br>
-
-Phone:
-+234 XXX XXX XXXX
-
-<br>
-
-Benin City, Edo State, Nigeria
-
+<p>
+Your generosity helps us expand our reach and deliver life-changing programmes in education, healthcare, humanitarian relief, youth empowerment, women empowerment and community development.
 </p>
+
+</div>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>Donate</h3>
+
+<p>
+Every contribution, regardless of size, helps create opportunities, restore hope and improve lives. Together, we can build stronger and more resilient communities.
+</p>
+
+<a href="#contact" class="btn btn-primary" style="margin-top:20px;">
+Contact Us to Donate
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>Volunteer</h3>
+
+<p>
+Become part of our volunteer network and contribute your skills, knowledge and time to programmes that positively impact communities across Nigeria.
+</p>
+
+<a href="#contact" class="btn btn-primary" style="margin-top:20px;">
+Become a Volunteer
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>Partner With Us</h3>
+
+<p>
+We welcome partnerships with government agencies, development partners, NGOs, corporate organisations, educational institutions and individuals who share our vision of sustainable development.
+</p>
+
+<a href="#contact" class="btn btn-primary" style="margin-top:20px;">
+Let's Partner
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact" class="light-section">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Contact Us</h2>
+
+<p>
+We welcome enquiries, partnerships, volunteer applications and opportunities to work together.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Daniel Asekhame Foundation</h3>
+
+<p>
+<strong>Address</strong><br>
+14 Aimure Street<br>
+GRA<br>
+Benin City<br>
+Edo State<br>
+Nigeria
+</p>
+
+<br>
+
+<p>
+<strong>Telephone</strong><br>
+08060388776
+</p>
+
+</div>
 
 </div>
 
@@ -506,21 +1148,64 @@ Benin City, Edo State, Nigeria
 
 <div class="container">
 
+<div class="footer-grid">
+
+<div>
+
+<h3>Daniel Asekhame Foundation</h3>
+
 <p>
+Building Hope.<br>
+Empowering Communities.<br>
+Transforming Lives.
+</p>
 
-© 2026 Daniel Asekhame Foundation.
+</div>
 
-All Rights Reserved.
+<div>
+
+<h3>Quick Links</h3>
+
+<p><a href="#about" style="color:#ffffff;">About Us</a></p>
+<p><a href="#focus" style="color:#ffffff;">Areas of Focus</a></p>
+<p><a href="#programmes" style="color:#ffffff;">Programmes</a></p>
+<p><a href="news-gallery.html" style="color:#ffffff;">News &amp; Gallery</a></p>
+
+</div>
+
+<div>
+
+<h3>Get Involved</h3>
+
+<p>Donate</p>
+<p>Volunteer</p>
+<p>Partnerships</p>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<p>
+&copy; 2026 Daniel Asekhame Foundation. All Rights Reserved.
+</p>
+
+<p style="margin-top:10px;">
+
+Website Designed &amp; Developed by
+
+<a href="https://omorishaoba-alt.github.io/ace-website/"
+target="_blank"
+rel="noopener">
+
+ACE™ — Enterprise Science™ for Enterprise Capability
+
+</a>
 
 </p>
 
-<br>
-
-<p>
-
-Building Hope • Empowering Communities • Creating Sustainable Impact
-
-</p>
+</div>
 
 </div>
 
@@ -528,21 +1213,30 @@ Building Hope • Empowering Communities • Creating Sustainable Impact
 
 <script>
 
-document.querySelectorAll('a[href^="#"]').forEach(link=>{
+const menuButton=document.querySelector(".mobile-menu");
+const navigation=document.querySelector("nav");
 
-link.addEventListener('click',function(e){
+menuButton.addEventListener("click",function(){
 
-const target=document.querySelector(this.getAttribute('href'));
+if(navigation.style.display==="block"){
 
-if(target){
+navigation.style.display="none";
 
-e.preventDefault();
+}else{
 
-target.scrollIntoView({
+navigation.style.display="block";
 
-behavior:'smooth'
+}
 
 });
+
+document.querySelectorAll('nav a').forEach(function(link){
+
+link.addEventListener('click',function(){
+
+if(window.innerWidth<769){
+
+navigation.style.display='none';
 
 }
 
