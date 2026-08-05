@@ -1,268 +1,232 @@
+
 /*
-====================================================
-DANIEL ASEKHAME FOUNDATION (DAF FOUNDATION)
-Production JavaScript
-====================================================
+    Daniel Asekhame Foundation (DAF Foundation)
+    Website Functional Script
+
+    Functions:
+    - Mobile navigation
+    - Active menu handling
+    - Core interaction support
+    - Smooth user experience
 */
 
-"use strict";
 
-/*==================================================
-  MOBILE NAVIGATION
-==================================================*/
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
 
-document.addEventListener("DOMContentLoaded", () => {
 
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navLinks = document.querySelector(".nav-links");
+        const menuToggle =
+            document.getElementById("menu-toggle");
 
-    if (menuToggle && navLinks) {
 
-        menuToggle.addEventListener("click", () => {
+        const navbar =
+            document.getElementById("navbar");
 
-            navLinks.classList.toggle("active");
-            menuToggle.classList.toggle("active");
 
-        });
 
-    }
+        /*
+            MOBILE MENU
+        */
 
-});
 
-/*==================================================
-  SMOOTH SCROLLING
-==================================================*/
+        if (menuToggle && navbar) {
 
-document.querySelectorAll('a[href^="#"]').forEach(link => {
 
-    link.addEventListener("click", function (e) {
+            menuToggle.addEventListener(
+                "click",
+                function () {
 
-        const target = document.querySelector(this.getAttribute("href"));
 
-        if (target) {
+                    navbar.classList.toggle(
+                        "open"
+                    );
 
-            e.preventDefault();
 
-            target.scrollIntoView({
+                    menuToggle.classList.toggle(
+                        "active"
+                    );
 
-                behavior: "smooth",
-                block: "start"
 
-            });
+                }
+            );
 
-        }
 
-    });
 
-});
+            const menuLinks =
+                navbar.querySelectorAll("a");
 
-/*==================================================
-  ACTIVE NAVIGATION
-==================================================*/
 
-const sections = document.querySelectorAll("section");
-const navItems = document.querySelectorAll(".nav-links a");
 
-window.addEventListener("scroll", () => {
+            menuLinks.forEach(
+                function (link) {
 
-    let current = "";
 
-    sections.forEach(section => {
+                    link.addEventListener(
+                        "click",
+                        function () {
 
-        const top = section.offsetTop - 120;
 
-        if (window.scrollY >= top) {
+                            navbar.classList.remove(
+                                "open"
+                            );
 
-            current = section.getAttribute("id");
 
-        }
+                            menuToggle.classList.remove(
+                                "active"
+                            );
 
-    });
 
-    navItems.forEach(link => {
+                        }
+                    );
 
-        link.classList.remove("active");
 
-        const href = link.getAttribute("href");
+                }
+            );
 
-        if (href && href.includes(`#${current}`)) {
-
-            link.classList.add("active");
 
         }
 
-    });
 
-});
 
-/*==================================================
-  FADE-IN ON SCROLL
-==================================================*/
+        /*
+            CORE VALUES INTERACTION
 
-const observer = new IntersectionObserver(entries => {
+            Supports expandable value
+            descriptions where buttons
+            use data-value attributes.
+        */
 
-    entries.forEach(entry => {
 
-        if (entry.isIntersecting) {
+        const valueButtons =
+            document.querySelectorAll(
+                "[data-value]"
+            );
 
-            entry.target.classList.add("visible");
 
-        }
 
-    });
+        valueButtons.forEach(
+            function (button) {
 
-}, {
 
-    threshold: 0.15
+                button.addEventListener(
+                    "click",
+                    function () {
 
-});
 
-document.querySelectorAll(
+                        const target =
+                            document.getElementById(
+                                button.dataset.value
+                            );
 
-    ".focus-card,\
-    .value-card,\
-    .programme-card,\
-    .impact-card,\
-    .strategy-card,\
-    .roadmap-card,\
-    .gallery-item,\
-    .news-card,\
-    .award-card,\
-    .vm-card"
 
-).forEach(card => {
 
-    card.classList.add("fade-item");
+                        if (target) {
 
-    observer.observe(card);
 
-});
+                            target.classList.toggle(
+                                "show"
+                            );
 
-/*==================================================
-  IMPACT COUNTER
-==================================================*/
 
-const counters = document.querySelectorAll(".impact-card h3");
+                        }
 
-const animateCounter = counter => {
 
-    const raw = counter.innerText.replace(/[^0-9]/g, "");
+                    }
+                );
 
-    if (!raw) return;
-
-    const target = parseInt(raw, 10);
-
-    let current = 0;
-
-    const step = Math.max(1, Math.ceil(target / 100));
-
-    const timer = setInterval(() => {
-
-        current += step;
-
-        if (current >= target) {
-
-            current = target;
-
-            clearInterval(timer);
-
-        }
-
-        counter.innerText = current.toLocaleString() + "+";
-
-    }, 20);
-
-};
-
-const counterObserver = new IntersectionObserver(entries => {
-
-    entries.forEach(entry => {
-
-        if (entry.isIntersecting) {
-
-            animateCounter(entry.target);
-
-            counterObserver.unobserve(entry.target);
-
-        }
-
-    });
-
-}, {
-
-    threshold: 0.5
-
-});
-
-counters.forEach(counter => {
-
-    if (/^\d/.test(counter.innerText)) {
-
-        counterObserver.observe(counter);
-
-    }
-
-});
-
-/*==================================================
-  DONATION BUTTON TRACKING
-==================================================*/
-
-document.querySelectorAll(".btn-donate,.donate-btn").forEach(button => {
-
-    button.addEventListener("click", () => {
-
-        console.log("Donation button clicked.");
-
-    });
-
-});
-
-/*==================================================
-  CURRENT YEAR
-==================================================*/
-
-document.querySelectorAll(".current-year").forEach(item => {
-
-    item.textContent = new Date().getFullYear();
-
-});
-
-/*==================================================
-  PREVENT EMPTY FORM SUBMISSION
-==================================================*/
-
-document.querySelectorAll("form").forEach(form => {
-
-    form.addEventListener("submit", event => {
-
-        const requiredFields = form.querySelectorAll("[required]");
-
-        let valid = true;
-
-        requiredFields.forEach(field => {
-
-            if (!field.value.trim()) {
-
-                valid = false;
-                field.focus();
 
             }
+        );
 
-        });
 
-        if (!valid) {
 
-            event.preventDefault();
+        /*
+            SIMPLE SCROLL REVEAL
+            Keeps experience elegant
+            without heavy libraries.
+        */
 
-            alert("Please complete all required fields before submitting.");
 
-        }
+        const revealElements =
+            document.querySelectorAll(
+                ".programme-card, .value-item, .roadmap-card"
+            );
 
-    });
 
-});
 
-/*==================================================
-  END OF FILE
-==================================================*/
+        const observer =
+            new IntersectionObserver(
+                function (entries) {
+
+
+                    entries.forEach(
+                        function (entry) {
+
+
+                            if (entry.isIntersecting) {
+
+
+                                entry.target.classList.add(
+                                    "visible"
+                                );
+
+
+                                observer.unobserve(
+                                    entry.target
+                                );
+
+
+                            }
+
+
+                        }
+                    );
+
+
+                },
+                {
+                    threshold: 0.15
+                }
+            );
+
+
+
+        revealElements.forEach(
+            function (element) {
+
+                observer.observe(
+                    element
+                );
+
+            }
+        );
+
+
+
+        /*
+            CURRENT YEAR FOOTER UPDATE
+        */
+
+
+        const yearElements =
+            document.querySelectorAll(
+                ".current-year"
+            );
+
+
+
+        yearElements.forEach(
+            function (element) {
+
+
+                element.textContent =
+                    new Date().getFullYear();
+
+
+            }
+        );
+
+
+    }
+);
