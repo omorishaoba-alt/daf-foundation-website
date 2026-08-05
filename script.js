@@ -1,236 +1,268 @@
-document.addEventListener("DOMContentLoaded", function () {
-
-
-
 /*
-CORE VALUES EXPANDER
+====================================================
+DANIEL ASEKHAME FOUNDATION (DAF FOUNDATION)
+Production JavaScript
+====================================================
 */
 
+"use strict";
 
-const valueDescriptions = {
+/*==================================================
+  MOBILE NAVIGATION
+==================================================*/
 
+document.addEventListener("DOMContentLoaded", () => {
 
-"Integrity":
-"Integrity is the foundation of everything we do at the Daniel Asekhame Foundation. We are committed to honesty, fairness, ethical conduct and respect in all our actions and decisions. We uphold the highest standards of professionalism, ensuring that our programmes and partnerships are guided by transparency, responsibility and a genuine commitment to serving humanity. By acting with integrity, we build lasting trust with our beneficiaries, donors, partners and the communities we serve.",
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
 
+    if (menuToggle && navLinks) {
 
+        menuToggle.addEventListener("click", () => {
 
-"Accountability":
-"At the Daniel Asekhame Foundation, accountability is one of our core values. We are committed to managing all resources with honesty, integrity and transparency. Every donation, partnership and contribution entrusted to us is used responsibly to achieve meaningful and measurable impact in the communities we serve.",
+            navLinks.classList.toggle("active");
+            menuToggle.classList.toggle("active");
 
+        });
 
+    }
 
-"Compassion":
-"Compassion is at the heart of the Daniel Asekhame Foundation. We are driven by a genuine concern for the well-being of others and a commitment to serving with kindness, empathy and dignity. We strive to bring hope, support and opportunities to vulnerable individuals and communities.",
+});
 
+/*==================================================
+  SMOOTH SCROLLING
+==================================================*/
 
+document.querySelectorAll('a[href^="#"]').forEach(link => {
 
-"Transparency":
-"Transparency is a guiding principle of the Daniel Asekhame Foundation. We are committed to openness in our operations, decision-making and use of resources. We provide clear information about our programmes, finances and impact, ensuring that donors, partners, beneficiaries and the public can have confidence in our work.",
+    link.addEventListener("click", function (e) {
 
+        const target = document.querySelector(this.getAttribute("href"));
 
+        if (target) {
 
-"Excellence":
-"Excellence is a core value of the Daniel Asekhame Foundation. We are committed to delivering high-quality programmes and services that create lasting impact through innovation, professionalism and continuous improvement.",
+            e.preventDefault();
 
+            target.scrollIntoView({
 
+                behavior: "smooth",
+                block: "start"
 
-"Inclusion":
-"The Daniel Asekhame Foundation believes that everyone deserves equal opportunities to thrive, regardless of age, gender, disability, ethnicity, religion or socio-economic background.",
+            });
 
+        }
 
+    });
 
-"Service to Humanity":
-"Service to humanity is the driving force behind the Daniel Asekhame Foundation. We are dedicated to improving lives through selfless service, compassion and sustainable community development.",
+});
 
+/*==================================================
+  ACTIVE NAVIGATION
+==================================================*/
 
+const sections = document.querySelectorAll("section");
+const navItems = document.querySelectorAll(".nav-links a");
 
-"Respect for Human Dignity":
-"The Daniel Asekhame Foundation believes that every person deserves to be treated with dignity, respect and compassion.",
+window.addEventListener("scroll", () => {
 
+    let current = "";
 
+    sections.forEach(section => {
 
-"Innovation":
-"Innovation is central to the Daniel Asekhame Foundation's approach to creating lasting social impact. We embrace creative ideas, modern technology and evidence-based solutions.",
+        const top = section.offsetTop - 120;
 
+        if (window.scrollY >= top) {
 
+            current = section.getAttribute("id");
 
-"Sustainable Development":
-"The Daniel Asekhame Foundation is committed to promoting sustainable development by creating solutions that meet the needs of today without compromising future generations."
+        }
+
+    });
+
+    navItems.forEach(link => {
+
+        link.classList.remove("active");
+
+        const href = link.getAttribute("href");
+
+        if (href && href.includes(`#${current}`)) {
+
+            link.classList.add("active");
+
+        }
+
+    });
+
+});
+
+/*==================================================
+  FADE-IN ON SCROLL
+==================================================*/
+
+const observer = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            entry.target.classList.add("visible");
+
+        }
+
+    });
+
+}, {
+
+    threshold: 0.15
+
+});
+
+document.querySelectorAll(
+
+    ".focus-card,\
+    .value-card,\
+    .programme-card,\
+    .impact-card,\
+    .strategy-card,\
+    .roadmap-card,\
+    .gallery-item,\
+    .news-card,\
+    .award-card,\
+    .vm-card"
+
+).forEach(card => {
+
+    card.classList.add("fade-item");
+
+    observer.observe(card);
+
+});
+
+/*==================================================
+  IMPACT COUNTER
+==================================================*/
+
+const counters = document.querySelectorAll(".impact-card h3");
+
+const animateCounter = counter => {
+
+    const raw = counter.innerText.replace(/[^0-9]/g, "");
+
+    if (!raw) return;
+
+    const target = parseInt(raw, 10);
+
+    let current = 0;
+
+    const step = Math.max(1, Math.ceil(target / 100));
+
+    const timer = setInterval(() => {
+
+        current += step;
+
+        if (current >= target) {
+
+            current = target;
+
+            clearInterval(timer);
+
+        }
+
+        counter.innerText = current.toLocaleString() + "+";
+
+    }, 20);
 
 };
 
+const counterObserver = new IntersectionObserver(entries => {
 
+    entries.forEach(entry => {
 
-const valueButtons = document.querySelectorAll(".values-grid button");
+        if (entry.isIntersecting) {
 
+            animateCounter(entry.target);
 
+            counterObserver.unobserve(entry.target);
 
-valueButtons.forEach(function(button){
+        }
 
+    });
 
-button.addEventListener("click", function(){
+}, {
 
-
-const valueName = this.textContent.trim();
-
-
-
-const existing = this.nextElementSibling;
-
-
-
-if(existing && existing.classList.contains("value-description")){
-
-
-existing.remove();
-
-
-return;
-
-
-}
-
-
-
-const box = document.createElement("div");
-
-
-box.className = "value-description";
-
-
-box.innerHTML = 
-"<p>" + valueDescriptions[valueName] + "</p>";
-
-
-
-this.parentNode.insertBefore(
-box,
-this.nextSibling
-);
-
-
+    threshold: 0.5
 
 });
 
+counters.forEach(counter => {
+
+    if (/^\d/.test(counter.innerText)) {
+
+        counterObserver.observe(counter);
+
+    }
 
 });
 
+/*==================================================
+  DONATION BUTTON TRACKING
+==================================================*/
 
+document.querySelectorAll(".btn-donate,.donate-btn").forEach(button => {
 
+    button.addEventListener("click", () => {
 
+        console.log("Donation button clicked.");
 
-
-/*
-HERO SLIDER
-*/
-
-
-const slides = document.querySelectorAll(".slide");
-
-
-let currentSlide = 0;
-
-
-
-if(slides.length > 0){
-
-
-setInterval(function(){
-
-
-slides[currentSlide].classList.remove("active");
-
-
-currentSlide++;
-
-
-if(currentSlide >= slides.length){
-
-currentSlide = 0;
-
-}
-
-
-
-slides[currentSlide].classList.add("active");
-
-
-
-},5000);
-
-
-}
-
-
-
-
-
-
-/*
-SMOOTH INTERNAL LINKS
-*/
-
-
-const links = document.querySelectorAll('a[href^="#"]');
-
-
-
-links.forEach(function(link){
-
-
-link.addEventListener("click", function(event){
-
-
-const target = document.querySelector(
-this.getAttribute("href")
-);
-
-
-
-if(target){
-
-
-event.preventDefault();
-
-
-target.scrollIntoView({
-
-behavior:"smooth"
+    });
 
 });
 
+/*==================================================
+  CURRENT YEAR
+==================================================*/
 
-}
+document.querySelectorAll(".current-year").forEach(item => {
 
+    item.textContent = new Date().getFullYear();
 
+});
+
+/*==================================================
+  PREVENT EMPTY FORM SUBMISSION
+==================================================*/
+
+document.querySelectorAll("form").forEach(form => {
+
+    form.addEventListener("submit", event => {
+
+        const requiredFields = form.querySelectorAll("[required]");
+
+        let valid = true;
+
+        requiredFields.forEach(field => {
+
+            if (!field.value.trim()) {
+
+                valid = false;
+                field.focus();
+
+            }
+
+        });
+
+        if (!valid) {
+
+            event.preventDefault();
+
+            alert("Please complete all required fields before submitting.");
+
+        }
+
+    });
 
 });
 
-
-});
-
-
-
-
-
-
-/*
-SIMPLE DONATION MESSAGE
-*/
-
-
-window.showDonationMessage = function(){
-
-
-alert(
-"Thank you for supporting the Daniel Asekhame Foundation. Donation payment details will be provided shortly."
-);
-
-
-};
-
-
-
-
-});
+/*==================================================
+  END OF FILE
+==================================================*/
