@@ -1,4 +1,3 @@
-
 /*
     Daniel Asekhame Foundation (DAF Foundation)
     Website Functional Script
@@ -6,8 +5,8 @@
     Functions:
     - Mobile navigation
     - Active menu handling
-    - Core interaction support
-    - Smooth user experience
+    - Core Values interaction
+    - Footer year update
 */
 
 
@@ -38,14 +37,10 @@ document.addEventListener(
                 function () {
 
 
-                    navbar.classList.toggle(
-                        "open"
-                    );
+                    navbar.classList.toggle("open");
 
 
-                    menuToggle.classList.toggle(
-                        "active"
-                    );
+                    menuToggle.classList.toggle("active");
 
 
                 }
@@ -67,14 +62,10 @@ document.addEventListener(
                         function () {
 
 
-                            navbar.classList.remove(
-                                "open"
-                            );
+                            navbar.classList.remove("open");
 
 
-                            menuToggle.classList.remove(
-                                "active"
-                            );
+                            menuToggle.classList.remove("active");
 
 
                         }
@@ -92,16 +83,67 @@ document.addEventListener(
         /*
             CORE VALUES INTERACTION
 
-            Supports expandable value
-            descriptions where buttons
-            use data-value attributes.
+            Updates the description panel
+            when value buttons are selected.
         */
 
 
         const valueButtons =
             document.querySelectorAll(
-                "[data-value]"
+                ".value-card"
             );
+
+
+        const valueDescription =
+            document.getElementById(
+                "value-description"
+            );
+
+
+
+        const valueContent = {
+
+
+            integrity:
+                "Integrity is the foundation of everything we do at the Daniel Asekhame Foundation. We are committed to honesty, fairness, ethical conduct and respect in all our actions and decisions.",
+
+
+            accountability:
+                "We accept responsibility for our actions, programmes and commitments while maintaining transparency with our beneficiaries, partners and communities.",
+
+
+            compassion:
+                "We serve humanity with empathy, understanding and genuine concern for the wellbeing of individuals and communities.",
+
+
+            transparency:
+                "We maintain openness, honesty and clear communication in all our activities and partnerships.",
+
+
+            excellence:
+                "We pursue the highest standards of quality, professionalism and continuous improvement in our service delivery.",
+
+
+            inclusion:
+                "We promote equal opportunity and ensure that individuals from all backgrounds can participate and benefit from our initiatives.",
+
+
+            service:
+                "We are committed to selfless service and creating positive impact that improves human lives.",
+
+
+            dignity:
+                "We respect the inherent worth, rights and dignity of every individual we serve.",
+
+
+            innovation:
+                "We encourage creative ideas, research and practical solutions that address community challenges.",
+
+
+            sustainability:
+                "We develop programmes that create lasting benefits for communities and future generations."
+
+        };
 
 
 
@@ -114,19 +156,42 @@ document.addEventListener(
                     function () {
 
 
-                        const target =
-                            document.getElementById(
-                                button.dataset.value
-                            );
+                        valueButtons.forEach(
+                            function (item) {
+
+                                item.classList.remove(
+                                    "active"
+                                );
+
+                            }
+                        );
 
 
 
-                        if (target) {
+                        button.classList.add(
+                            "active"
+                        );
 
 
-                            target.classList.toggle(
-                                "show"
-                            );
+
+                        const selectedValue =
+                            button.dataset.value;
+
+
+
+                        if (valueDescription &&
+                            valueContent[selectedValue]) {
+
+
+                            valueDescription.innerHTML = `
+
+                                <h3>${button.querySelector("h3").textContent}</h3>
+
+                                <p>
+                                    ${valueContent[selectedValue]}
+                                </p>
+
+                            `;
 
 
                         }
@@ -135,69 +200,6 @@ document.addEventListener(
                     }
                 );
 
-
-            }
-        );
-
-
-
-        /*
-            SIMPLE SCROLL REVEAL
-            Keeps experience elegant
-            without heavy libraries.
-        */
-
-
-        const revealElements =
-            document.querySelectorAll(
-                ".programme-card, .value-item, .roadmap-card"
-            );
-
-
-
-        const observer =
-            new IntersectionObserver(
-                function (entries) {
-
-
-                    entries.forEach(
-                        function (entry) {
-
-
-                            if (entry.isIntersecting) {
-
-
-                                entry.target.classList.add(
-                                    "visible"
-                                );
-
-
-                                observer.unobserve(
-                                    entry.target
-                                );
-
-
-                            }
-
-
-                        }
-                    );
-
-
-                },
-                {
-                    threshold: 0.15
-                }
-            );
-
-
-
-        revealElements.forEach(
-            function (element) {
-
-                observer.observe(
-                    element
-                );
 
             }
         );
