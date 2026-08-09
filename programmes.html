@@ -1,797 +1,1233 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Programmes | Daniel Asekhame Foundation (DAF Foundation)</title>
+<title>Our Work | Daniel Asekhame Foundation (DAF Foundation)</title>
 
-    <meta name="description"
-        content="Explore the programmes and strategic initiatives of Daniel Asekhame Foundation including community development, healthcare, education, youth empowerment and humanitarian support.">
+<meta name="description"
+    content="Explore the work, community activities, programmes and official photographic record of the Daniel Asekhame Foundation across Nigeria.">
 
-    <meta name="keywords"
-        content="DAF Foundation Programmes, Community Development, Healthcare, Education, Youth Empowerment">
+<meta name="keywords"
+    content="DAF Foundation, Daniel Asekhame Foundation, Community Development, Education, Healthcare, Humanitarian Support, Youth Empowerment">
 
-    <link rel="preconnect"
-        href="https://fonts.googleapis.com">
+<meta name="author"
+    content="Daniel Asekhame Foundation">
 
-    <link rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin>
+<meta name="theme-color"
+    content="#157347">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
 
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<link rel="preconnect"
+    href="https://fonts.googleapis.com">
 
-    <link rel="stylesheet"
-        href="style.css">
+<link rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<link rel="stylesheet"
+    href="style.css">
 
 </head>
 
-
 <body>
-
 
 <header class="header">
 
-    <div class="container">
+<div class="container">
 
 
-        <a href="index.html"
-           class="logo">
+    <a href="index.html"
+       class="logo">
+
+        <img src="images/daf-logo.png"
+             alt="Daniel Asekhame Foundation Logo">
+
+        <div>
+
+            <h1>
+                DAF Foundation
+            </h1>
+
+            <span>
+                Transforming Lives
+            </span>
+
+        </div>
+
+    </a>
 
 
-            <img src="images/daf-logo.png"
-                 alt="Daniel Asekhame Foundation Logo">
+    <nav class="navbar"
+         id="navbar"
+         aria-label="Primary Navigation">
+
+        <ul>
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html">
+                    About DAF
+                </a>
+            </li>
+
+            <li>
+                <a href="programmes.html"
+                   class="active">
+                    Our Work
+                </a>
+            </li>
+
+            <li>
+                <a href="#focus">
+                    Areas of Focus
+                </a>
+            </li>
+
+            <li>
+                <a href="#gallery">
+                    Gallery
+                </a>
+            </li>
+
+            <li>
+                <a href="#partner">
+                    Partner
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
 
 
-            <div>
+    <div class="header-actions">
 
-                <h1>
-                    DAF Foundation
-                </h1>
+        <a href="https://wa.me/2348060388776"
+           class="btn btn-primary"
+           target="_blank"
+           rel="noopener">
 
-                <span>
-                    Transforming Lives
-                </span>
-
-            </div>
-
+            WhatsApp Us
 
         </a>
 
 
+        <button class="menu-toggle"
+                id="menu-toggle"
+                aria-label="Open Navigation"
+                aria-expanded="false"
+                aria-controls="mobile-menu">
 
-        <nav class="navbar"
-             id="navbar">
+            <i class="fas fa-bars"></i>
 
-
-            <ul>
-
-
-                <li>
-                    <a href="index.html">
-                        Home
-                    </a>
-                </li>
-
-
-                <li>
-                    <a href="about.html">
-                        About
-                    </a>
-                </li>
-
-
-                <li>
-                    <a href="programmes.html"
-                       class="active">
-                        Programmes
-                    </a>
-                </li>
-
-
-                <li>
-                    <a href="index.html#impact">
-                        Impact
-                    </a>
-                </li>
-
-
-                <li>
-                    <a href="index.html#gallery">
-                        Gallery
-                    </a>
-                </li>
-
-
-                <li>
-                    <a href="index.html#contact">
-                        Contact
-                    </a>
-                </li>
-
-
-            </ul>
-
-
-        </nav>
-
-
-
-        <div class="header-actions">
-
-
-            <a href="https://wa.me/2348060388776"
-               class="btn btn-primary"
-               target="_blank"
-               rel="noopener">
-
-                Donate
-
-            </a>
-
-
-            <button class="menu-toggle"
-                    id="menu-toggle"
-                    aria-label="Open Navigation">
-
-                <i class="fas fa-bars"></i>
-
-            </button>
-
-
-        </div>
-
+        </button>
 
     </div>
 
+
+</div>
 
 </header>
 
 
 
-<main>
+<div class="menu-overlay"
+     id="menu-overlay"
+     aria-hidden="true">
+</div>
 
+<aside class="mobile-menu"
+       id="mobile-menu"
+       aria-hidden="true">
+
+<div class="mobile-menu-header">
+
+    <h2>
+        Navigation
+    </h2>
+
+    <button id="close-menu"
+            class="close-menu"
+            aria-label="Close Navigation">
+
+        &times;
+
+    </button>
+
+</div>
+
+
+<nav aria-label="Mobile Navigation">
+
+
+    <div class="menu-section">
+
+        <h3>
+            HOME
+        </h3>
+
+        <a href="index.html">
+            Home
+        </a>
+
+    </div>
+
+
+    <div class="menu-section">
+
+        <h3>
+            ABOUT DAF
+        </h3>
+
+        <a href="about.html">
+            About the Foundation
+        </a>
+
+        <a href="about.html#vision">
+            Vision &amp; Mission
+        </a>
+
+        <a href="about.html#founder">
+            Founder
+        </a>
+
+    </div>
+
+
+    <div class="menu-section">
+
+        <h3>
+            OUR WORK
+        </h3>
+
+        <a href="#focus">
+            Areas of Focus
+        </a>
+
+        <a href="#programmes">
+            Programmes
+        </a>
+
+        <a href="#gallery">
+            Gallery
+        </a>
+
+        <a href="#impact">
+            Community Impact
+        </a>
+
+    </div>
+
+
+    <div class="menu-section">
+
+        <h3>
+            GET INVOLVED
+        </h3>
+
+        <a href="#volunteer">
+            Volunteer
+        </a>
+
+        <a href="#partner">
+            Partner With Us
+        </a>
+
+        <a href="https://wa.me/2348060388776"
+           target="_blank"
+           rel="noopener">
+
+            WhatsApp Enquiries
+
+        </a>
+
+    </div>
+
+
+    <div class="menu-section">
+
+        <h3>
+            CONNECT
+        </h3>
+
+        <a href="index.html#contact">
+            Contact
+
+        </a>
+
+        <a href="https://wa.me/2348060388776"
+           target="_blank"
+           rel="noopener">
+
+            WhatsApp
+
+        </a>
+
+    </div>
+
+
+</nav>
+
+</aside>
+
+
+
+<main>
 
 <section class="page-banner">
 
+<div class="container">
 
-    <div class="container">
+    <h2>
+        Our Work
+    </h2>
 
+    <p>
+        Supporting people and communities through service, education, healthcare, humanitarian assistance and community development.
+    </p>
+
+</div>
+
+</section>
+
+
+
+<section class="programmes-intro"
+         id="programmes">
+
+<div class="container">
+
+    <div class="section-heading">
+
+        <span>
+            Foundation Programmes
+        </span>
 
         <h2>
-            Our Programmes
+            Creating Meaningful Community Impact
         </h2>
 
-
         <p>
-            Strategic interventions designed to empower individuals and strengthen communities.
+            The Daniel Asekhame Foundation's work is focused on community-centred service and interventions across areas identified in the Foundation's supplied material.
         </p>
 
-
     </div>
 
+</div>
 
 </section>
 
 
 
-<section class="programmes-intro">
+<section class="programme-cards"
+         id="focus">
 
+<div class="container">
 
-    <div class="container">
+    <div class="section-heading">
 
+        <span>
+            Areas of Focus
+        </span>
 
-        <div class="section-heading">
-
-
-            <span>
-                Foundation Programmes
-            </span>
-
-
-            <h2>
-                Creating Sustainable Social Impact
-            </h2>
-
-
-            <p>
-                The Daniel Asekhame Foundation implements programmes focused on community development, healthcare, education, humanitarian support, youth empowerment and research.
-            </p>
-
-
-        </div>
-
+        <h2>
+            Serving Communities Across Key Areas
+        </h2>
 
     </div>
 
 
-</section>
+    <div class="programmes-grid">
 
 
+        <article class="programme-card">
 
-<section class="programme-cards">
-
-
-    <div class="container">
-
-
-        <div class="programmes-grid">
-
-
-            <article class="programme-card">
-
-
-                <i class="fas fa-people-group"></i>
-
-
-                <h3>
-                    Community Outreach
-                </h3>
-
-
-                <p>
-                    Supporting communities through meaningful interventions that promote sustainable development and improved living conditions.
-                </p>
-
-
-            </article>
-
-
-
-            <article class="programme-card">
-
-
-                <i class="fas fa-graduation-cap"></i>
-
-
-                <h3>
-                    Scholarship Scheme
-                </h3>
-
-
-                <p>
-                    Providing educational support and opportunities that enable young people to achieve their full potential.
-                </p>
-
-
-            </article>
-
-
-
-            <article class="programme-card">
-
-
-                <i class="fas fa-stethoscope"></i>
-
-
-                <h3>
-                    Medical Missions
-                </h3>
-
-
-                <p>
-                    Supporting access to healthcare through medical outreach programmes and health interventions.
-                </p>
-
-
-            </article>
-
-
-
-            <article class="programme-card">
-
-
-                <i class="fas fa-user-group"></i>
-
-
-                <h3>
-                    Youth Empowerment
-                </h3>
-
-
-                <p>
-                    Developing skills, confidence and opportunities for young people through empowerment initiatives.
-                </p>
-
-
-            </article>
-
-
-        </div>
-
-
-    </div>
-
-
-</section>
-
-  <section class="programme-cards continuation">
-
-
-    <div class="container">
-
-
-        <div class="programmes-grid">
-
-
-
-            <article class="programme-card">
-
-
-                <i class="fas fa-person-dress"></i>
-
-
-                <h3>
-                    Women Empowerment
-                </h3>
-
-
-                <p>
-                    Supporting women through opportunities, skills development and initiatives that promote economic and social empowerment.
-                </p>
-
-
-            </article>
-
-
-
-            <article class="programme-card">
-
-
-                <i class="fas fa-tools"></i>
-
-
-                <h3>
-                    Skills Acquisition
-                </h3>
-
-
-                <p>
-                    Providing practical skills development opportunities that support self-reliance and sustainable livelihoods.
-                </p>
-
-
-            </article>
-
-
-
-            <article class="programme-card">
-
-
-                <i class="fas fa-shield-heart"></i>
-
-
-                <h3>
-                    Human Trafficking Prevention Campaign
-                </h3>
-
-
-                <p>
-                    Promoting awareness, prevention and advocacy against human trafficking while protecting vulnerable individuals.
-                </p>
-
-
-            </article>
-
-
-
-            <article class="programme-card">
-
-
-                <i class="fas fa-flask"></i>
-
-
-                <h3>
-                    Research Grants
-                </h3>
-
-
-                <p>
-                    Supporting research initiatives that provide practical solutions to societal challenges and promote sustainable development.
-                </p>
-
-
-            </article>
-
-
-
-            <article class="programme-card">
-
-
-                <i class="fas fa-hand-holding-heart"></i>
-
-
-                <h3>
-                    Emergency Humanitarian Assistance
-                </h3>
-
-
-                <p>
-                    Providing support to vulnerable individuals and communities during times of urgent need.
-                </p>
-
-
-            </article>
-
-
-
-            <article class="programme-card">
-
-
-                <i class="fas fa-users-rays"></i>
-
-
-                <h3>
-                    Leadership Development
-                </h3>
-
-
-                <p>
-                    Building responsible leaders through learning, service, mentorship and community engagement.
-                </p>
-
-
-            </article>
-
-
-
-            <article class="programme-card">
-
-
-                <i class="fas fa-hands-helping"></i>
-
-
-                <h3>
-                    Volunteer Development
-                </h3>
-
-
-                <p>
-                    Encouraging volunteer participation and building networks of individuals committed to serving humanity.
-                </p>
-
-
-            </article>
-
-
-
-            <article class="programme-card">
-
-
-                <i class="fas fa-bullhorn"></i>
-
-
-                <h3>
-                    Community Advocacy
-                </h3>
-
-
-                <p>
-                    Promoting awareness and engagement on important issues affecting individuals and communities.
-                </p>
-
-
-            </article>
-
-
-
-        </div>
-
-
-    </div>
-
-
-</section>
-
-
-
-<section class="strategic-programme-section">
-
-
-    <div class="container">
-
-
-        <div class="section-heading">
-
-
-            <span>
-                Strategic Work Programme
-            </span>
-
-
-            <h2>
-                2027–2028 Strategic Work Programme
-            </h2>
-
-
-            <p>
-                Building stronger, healthier and more prosperous communities through sustainable interventions that improve lives, promote education, protect vulnerable people and create opportunities for future generations.
-            </p>
-
-
-        </div>
-
-
-        <div class="strategic-content">
-
+            <i class="fas fa-people-group"></i>
 
             <h3>
-                Year One (2027)
+                Community Development
             </h3>
 
+            <p>
+                Supporting community engagement, local development initiatives, empowerment and activities that contribute to stronger and more resilient communities.
+            </p>
 
-            <ul>
-
-                <li>
-                    Education Development Programme
-                </li>
-
-                <li>
-                    Community Healthcare Initiative
-                </li>
-
-                <li>
-                    Youth Empowerment Programme
-                </li>
-
-                <li>
-                    Women Empowerment Programme
-                </li>
-
-                <li>
-                    Anti-Human Trafficking Campaign
-                </li>
-
-                <li>
-                    Humanitarian Services
-                </li>
-
-                <li>
-                    Research and Policy Development
-                </li>
-
-            </ul>
+        </article>
 
 
+        <article class="programme-card">
+
+            <i class="fas fa-graduation-cap"></i>
 
             <h3>
-                Year Two (2028)
+                Education
             </h3>
 
-
-            <ul>
-
-                <li>
-                    Rural Community Development
-                </li>
-
-                <li>
-                    Education Expansion
-                </li>
-
-                <li>
-                    Advanced Healthcare Services
-                </li>
-
-                <li>
-                    Youth Enterprise Development
-                </li>
-
-                <li>
-                    Women and Girls Development
-                </li>
-
-                <li>
-                    Community Peace and Leadership
-                </li>
-
-                <li>
-                    Research and Innovation Fund
-                </li>
-
-            </ul>
-
-
-        </div>
-
-
-    </div>
-
-
-</section>
-
-  <section class="signature-programmes">
-
-
-    <div class="container">
-
-
-        <div class="section-heading">
-
-
-            <span>
-                Annual Initiatives
-            </span>
-
-
-            <h2>
-                Signature Programmes
-            </h2>
-
-
-        </div>
-
-
-
-        <div class="signature-grid">
-
-
-            <div class="signature-item">
-                Daniel Asekhame Annual Scholarship Awards
-            </div>
-
-
-            <div class="signature-item">
-                DAF Medical Outreach Week
-            </div>
-
-
-            <div class="signature-item">
-                Youth Empowerment Summit
-            </div>
-
-
-            <div class="signature-item">
-                Women Economic Empowerment Fair
-            </div>
-
-
-            <div class="signature-item">
-                Anti-Human Trafficking Awareness Campaign
-            </div>
-
-
-            <div class="signature-item">
-                Community Development Awards
-            </div>
-
-
-            <div class="signature-item">
-                Christmas Food and Relief Programme
-            </div>
-
-
-            <div class="signature-item">
-                International Day of Service
-            </div>
-
-
-        </div>
-
-
-    </div>
-
-
-</section>
-
-
-
-
-<section class="impact-section">
-
-
-    <div class="container">
-
-
-        <div class="section-heading">
-
-
-            <span>
-                Our Expected Impact
-            </span>
-
-
-            <h2>
-                2027–2028 Impact Goals
-            </h2>
-
-
-        </div>
-
-
-
-        <div class="impact-list">
-
-
-            <ul>
-
-                <li>
-                    Over 5,000 people reached through healthcare interventions.
-                </li>
-
-
-                <li>
-                    More than 500 students supported with scholarships and educational materials.
-                </li>
-
-
-                <li>
-                    2,000 youths and women empowered through skills and entrepreneurship programmes.
-                </li>
-
-
-                <li>
-                    100 communities reached with anti-human trafficking awareness.
-                </li>
-
-
-                <li>
-                    Hundreds of vulnerable families supported through humanitarian assistance.
-                </li>
-
-
-                <li>
-                    Sustainable partnerships with government agencies, development partners and private organisations.
-                </li>
-
-
-            </ul>
-
-
-        </div>
-
-
-    </div>
-
-
-</section>
-
-
-
-
-<section class="partnership-section">
-
-
-    <div class="container">
-
-
-        <div class="section-heading">
-
-
-            <span>
-                Partnership
-            </span>
-
-
-            <h2>
-                Work With Us
-            </h2>
-
-
-        </div>
-
-
-
-        <div class="partnership-content">
-
-
             <p>
-                The Daniel Asekhame Foundation welcomes partnerships with government agencies, development organisations, corporate institutions, donor agencies, educational institutions, healthcare providers and individuals who share our vision of creating sustainable and inclusive community development across Nigeria.
+                Supporting educational opportunities, learning activities, school-related assistance and youth development.
             </p>
 
+        </article>
 
+
+        <article class="programme-card">
+
+            <i class="fas fa-heart-pulse"></i>
+
+            <h3>
+                Healthcare Support
+            </h3>
 
             <p>
-                Together, we can transform lives, strengthen communities and build a brighter future for generations to come.
+                Supporting health-related activities, medical assistance, community health awareness and access to essential services.
             </p>
 
+        </article>
 
+
+        <article class="programme-card">
+
+            <i class="fas fa-hand-holding-heart"></i>
+
+            <h3>
+                Humanitarian Support
+            </h3>
+
+            <p>
+                Supporting individuals and communities affected by difficult circumstances, emergencies and humanitarian needs.
+            </p>
+
+        </article>
+
+
+        <article class="programme-card">
+
+            <i class="fas fa-seedling"></i>
+
+            <h3>
+                Agriculture &amp; Environment
+            </h3>
+
+            <p>
+                Supporting community activities connected with agriculture, productivity, environmental responsibility and sustainable development.
+            </p>
+
+        </article>
+
+
+        <article class="programme-card">
+
+            <i class="fas fa-users"></i>
+
+            <h3>
+                Youth &amp; Women
+            </h3>
+
+            <p>
+                Supporting youth participation, leadership, skills development and initiatives that promote opportunities for women and young people.
+            </p>
+
+        </article>
+
+
+        <article class="programme-card">
+
+            <i class="fas fa-shield-heart"></i>
+
+            <h3>
+                Human Trafficking Advocacy
+            </h3>
+
+            <p>
+                Promoting awareness, prevention, advocacy and community engagement concerning human trafficking and protection from exploitation.
+            </p>
+
+        </article>
+
+
+        <article class="programme-card">
+
+            <i class="fas fa-microscope"></i>
+
+            <h3>
+                Research &amp; Knowledge
+            </h3>
+
+            <p>
+                Supporting interest in research, knowledge development and evidence-informed approaches to community and social development.
+            </p>
+
+        </article>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<section class="impact-section"
+         id="impact">
+
+<div class="container">
+
+    <div class="section-heading">
+
+        <span>
+            Community Impact
+        </span>
+
+        <h2>
+            A Record of Community-Focused Service
+        </h2>
+
+        <p>
+            The Foundation's supplied photographic and documentary material records activities involving education, healthcare, humanitarian assistance, agriculture, environmental awareness, community engagement and youth-related support.
+        </p>
+
+    </div>
+
+
+    <div class="impact-list">
+
+        <ul>
+
+            <li>
+                Educational support activities, including distribution of learning materials.
+            </li>
+
+            <li>
+                Community food and humanitarian support activities.
+            </li>
+
+            <li>
+                Healthcare-related assistance and medical supply activities.
+            </li>
+
+            <li>
+                Agricultural and community productivity engagement.
+            </li>
+
+            <li>
+                Environmental activities including tree planting.
+            </li>
+
+            <li>
+                Community engagement and support during difficult periods.
+            </li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<section class="gallery-section"
+         id="gallery">
+
+<div class="container">
+
+
+    <div class="section-heading">
+
+        <span>
+            Official Photographic Record
+        </span>
+
+        <h2>
+            DAF Foundation Gallery
+        </h2>
+
+        <p>
+            A photographic record supplied by the Daniel Asekhame Foundation documenting community engagement, educational support, humanitarian activities, healthcare-related activities, agriculture, environmental initiatives and other Foundation activities.
+        </p>
+
+        <p>
+            The photographs are presented as part of the Foundation's supplied documentary record. The Gallery itself does not constitute independent verification of the activities depicted.
+        </p>
+
+    </div>
+
+
+    <div class="gallery-grid">
+
+
+        <figure class="gallery-item">
+
+            <img src="images/IMG-20260803-WA0001(1).jpg"
+                 alt="DAF Foundation corporate branding"
+                 loading="lazy">
+
+            <figcaption>
+                Corporate branding supplied by the Foundation.
+            </figcaption>
+
+        </figure>
+
+
+        <figure class="gallery-item">
+
+            <img src="images/IMG-20260803-WA0002(1).jpg"
+                 alt="DAF Foundation corporate logo"
+                 loading="lazy">
+
+            <figcaption>
+                Corporate logo supplied by the Foundation.
+            </figcaption>
+
+        </figure>
+
+
+        <figure class="gallery-item">
+
+            <img src="images/IMG-20260803-WA0002.jpg"
+                 alt="DAF Foundation official photograph"
+                 loading="lazy">
+
+            <figcaption>
+                Official Foundation photograph.
+            </figcaption>
+
+        </figure>
+
+
+        <figure class="gallery-item">
+
+            <img src="images/IMG-20260803-WA0003.jpg"
+                 alt="Honourable Daniel Asekhame"
+                 loading="lazy">
+
+            <figcaption>
+                Honourable Daniel Asekhame.
+            </figcaption>
+
+        </figure>
+
+
+        <figure class="gallery-item">
+
+            <img src="images/IMG-20260804-WA0000(1).jpg"
+                 alt="DAF Foundation community activity"
+                 loading="lazy">
+
+            <figcaption>
+                Foundation activity photograph.
+            </figcaption>
+
+        </figure>
+
+
+        <figure class="gallery-item">
+
+            <img src="images/IMG-20260804-WA0000.jpg"
+                 alt="DAF Foundation community activity"
+                 loading="lazy">
+
+            <figcaption>
+                Foundation activity photograph.
+            </figcaption>
+
+        </figure>
+
+
+        <figure class="gallery-item">
+
+            <img src="images/IMG-20260804-WA0001.jpg"
+                 alt="DAF Foundation community activity"
+                 loading="lazy">
+
+            <figcaption>
+                Foundation activity photograph.
+            </figcaption>
+
+        </figure>
+
+
+        <figure class="gallery-item">
+
+            <img src="images/IMG-20260804-WA0002(1).jpg"
+                 alt="DAF Foundation community activity"
+                 loading="lazy">
+
+            <figcaption>
+                Foundation activity photograph.
+            </figcaption>
+
+        </figure>
+
+
+        <figure class="gallery-item">
+
+            <img src="images/IMG-20260804-WA0002.jpg"
+                 alt="DAF Foundation community activity"
+                 loading="lazy">
+
+            <figcaption>
+                Foundation activity photograph.
+            </figcaption>
+
+        </figure>
+
+
+        <figure class="gallery-item">
+
+            <img src="images/IMG-20260804-WA0003(1).jpg"
+                 alt="DAF Foundation community activity"
+                 loading="lazy">
+
+            <figcaption>
+                Foundation activity photograph.
+            </figcaption>
+
+        </figure>
+
+
+        <figure class="gallery-item">
+
+            <img src="images/IMG-20260804-WA0003(2).jpg"
+                 alt="DAF Foundation community activity"
+                 loading="lazy">
+
+            <figcaption>
+                Foundation activity photograph.
+            </figcaption>
+
+        </figure>
+
+
+        <figure class="gallery-item">
+
+            <img src="images/IMG-20260804-WA0003.jpg"
+                 alt="Community engagements speaking on new technologies and ways for enhancing crop productivity in Owan West"
+                 loading="lazy">
+
+            <figcaption>
+                Community engagement on new technologies and ways of enhancing crop productivity in Owan West.
+            </figcaption>
+
+        </figure>
+
+
+        <figure class="gallery-item">
+
+            <img src="images/IMG-20260804-WA0004(1).jpg"
+                 alt="DAF Foundation community activity"
+                 loading="lazy">
+
+            <figcaption>
+                Foundation activity photograph.
+            </figcaption>
+
+        </figure>
+
+
+        <figure class="gallery-item">
+
+            <img src="images/IMG-20260804-WA0004(2).jpg"
+                 alt="DAF Foundation community activity"
+                 loading="lazy">
+
+            <figcaption>
+                Foundation activity photograph.
+            </figcaption>
+
+        </figure>
+
+
+        <figure class="gallery-item">
+
+            <img src="images/IMG-20260804-WA0004.jpg"
+                 alt="DAF Foundation community activity"
+                 loading="lazy">
+
+            <figcaption>
+                Foundation activity photograph.
+            </figcaption>
+
+        </figure>
+
+
+        <figure class="gallery-item">
+
+            <img src="images/IMG-20260804-WA0005.jpg"
+                 alt="DAF Foundation community activity"
+                 loading="lazy">
+
+            <figcaption>
+                Foundation activity photograph.
+            </figcaption>
+
+        </figure>
+
+
+        <figure class="gallery-item">
+
+            <img src="images/IMG-20260804-WA0006(1).jpg"
+                 alt="DAF Foundation community activity"
+                 loading="lazy">
+
+            <figcaption>
+                Foundation activity photograph.
+            </figcaption>
+
+        </figure>
+
+
+        <figure class="gallery-item">
+
+            <img src="images/IMG-20260804-WA0007.jpg"
+                 alt="Tree planting exercises to encourage afforestation"
+                 loading="lazy">
+
+            <figcaption>
+                Tree planting exercises to encourage afforestation.
+            </figcaption>
+
+        </figure>
+
+
+        <figure class="gallery-item">
+
+            <img src="images/IMG-20260804-WA0008(1).jpg"
+                 alt="Visit to internally displaced persons camp in Siluko Road, Benin City, Edo State"
+                 loading="lazy">
+
+            <figcaption>
+                Visit to an internally displaced persons camp in Siluko Road, Benin City, Edo State, with food items and medical services and supplies.
+            </figcaption>
+
+        </figure>
+
+
+        <figure class="gallery-item">
+
+            <img src="images/IMG-20260804-WA0008.jpg"
+                 alt="DAF Foundation humanitarian activity"
+                 loading="lazy">
+
+            <figcaption>
+                Foundation humanitarian activity.
+            </figcaption>
+
+        </figure>
+
+
+        <figure class="gallery-item">
+
+            <img src="images/IMG-20260804-WA0009.jpg"
+                 alt="DAF Foundation activity"
+                 loading="lazy">
+
+            <figcaption>
+                Official Foundation photograph.
+            </figcaption>
+
+        </figure>
+
+
+        <figure class="gallery-item">
+
+            <img src="images/IMG-20260804-WA0010.jpg"
+                 alt="DAF Foundation activity"
+                 loading="lazy">
+
+            <figcaption>
+                Official Foundation photograph.
+            </figcaption>
+
+        </figure>
+
+
+        <figure class="gallery-item">
+
+            <img src="images/IMG-20260804-WA0011(1).jpg"
+                 alt="DAF Foundation youth sports support"
+                 loading="lazy">
+
+            <figcaption>
+                Photograph supplied in connection with youth sports support activities.
+            </figcaption>
+
+        </figure>
+
+
+        <figure class="gallery-item">
+
+            <img src="images/IMG-20260804-WA0011.jpg"
+                 alt="DAF Foundation youth activity"
+                 loading="lazy">
+
+            <figcaption>
+                Official Foundation photograph.
+            </figcaption>
+
+        </figure>
+
+
+        <figure class="gallery-item">
+
+            <img src="images/IMG-20260804-WA0012(1).jpg"
+                 alt="DAF Foundation community activity"
+                 loading="lazy">
+
+            <figcaption>
+                Foundation activity photograph.
+            </figcaption>
+
+        </figure>
+
+
+        <figure class="gallery-item">
+
+            <img src="images/IMG-20260804-WA0012.jpg"
+                 alt="DAF Foundation community activity"
+                 loading="lazy">
+
+            <figcaption>
+                Foundation activity photograph.
+            </figcaption>
+
+        </figure>
+
+
+        <figure class="gallery-item">
+
+            <img src="images/IMG-20260804-WA0013.jpg"
+                 alt="Community engagement, food and support during COVID-19"
+                 loading="lazy">
+
+            <figcaption>
+                Community engagement, food and support supplied in connection with COVID-19 response activities.
+            </figcaption>
+
+        </figure>
+
+
+        <figure class="gallery-item">
+
+            <img src="images/IMG-20260804-WA0015.jpg"
+                 alt="Fight against Ebola outbreak"
+                 loading="lazy">
+
+            <figcaption>
+                Photograph supplied in connection with the fight against the Ebola outbreak.
+            </figcaption>
+
+        </figure>
+
+
+        <figure class="gallery-item">
+
+            <img src="images/IMG-20260804-WA0016.jpg"
+                 alt="Rain storm disaster response in Okpuje, Owan West"
+                 loading="lazy">
+
+            <figcaption>
+                Rain storm disaster response with emergency relief agencies in Okpuje, Owan West.
+            </figcaption>
+
+        </figure>
+
+
+        <figure class="gallery-item">
+
+            <img src="images/IMG-20260804-WA0017.jpg"
+                 alt="Mobilization and supply of medicine"
+                 loading="lazy">
+
+            <figcaption>
+                Mobilization and supply of medicine.
+            </figcaption>
+
+        </figure>
+
+
+        <figure class="gallery-item">
+
+            <img src="images/IMG-20260804-WA0018(1).jpg"
+                 alt="DAF Foundation activity"
+                 loading="lazy">
+
+            <figcaption>
+                Official Foundation photograph.
+            </figcaption>
+
+        </figure>
+
+
+        <figure class="gallery-item">
+
+            <img src="images/IMG-20260804-WA0018.jpg"
+                 alt="DAF Foundation activity"
+                 loading="lazy">
+
+            <figcaption>
+                Official Foundation photograph.
+            </figcaption>
+
+        </figure>
+
+
+        <figure class="gallery-item">
+
+            <img src="images/IMG-20260804-WA0019.jpg"
+                 alt="DAF Foundation activity"
+                 loading="lazy">
+
+            <figcaption>
+                Official Foundation photograph.
+            </figcaption>
+
+        </figure>
+
+
+        <figure class="gallery-item">
+
+            <img src="images/IMG-20260804-WA0020.jpg"
+                 alt="Awards for excellence"
+                 loading="lazy">
+
+            <figcaption>
+                Awards for excellence.
+            </figcaption>
+
+        </figure>
+
+
+        <figure class="gallery-item">
+
+            <img src="images/IMG-20260804-WA0021(1).jpg"
+                 alt="DAF Foundation activity"
+                 loading="lazy">
+
+            <figcaption>
+                Official Foundation photograph.
+            </figcaption>
+
+        </figure>
+
+
+        <figure class="gallery-item">
+
+            <img src="images/IMG-20260804-WA0021.jpg"
+                 alt="DAF Foundation activity"
+                 loading="lazy">
+
+            <figcaption>
+                Official Foundation photograph.
+            </figcaption>
+
+        </figure>
+
+
+        <figure class="gallery-item">
+
+            <img src="images/IMG-20260804-WA0022.jpg"
+                 alt="DAF Foundation activity"
+                 loading="lazy">
+
+            <figcaption>
+                Official Foundation photograph.
+            </figcaption>
+
+        </figure>
+
+
+        <figure class="gallery-item">
+
+            <img src="images/IMG-20260804-WA0023(1).jpg"
+                 alt="DAF Foundation activity"
+                 loading="lazy">
+
+            <figcaption>
+                Official Foundation photograph.
+            </figcaption>
+
+        </figure>
+
+
+        <figure class="gallery-item">
+
+            <img src="images/IMG-20260804-WA0023.jpg"
+                 alt="DAF Foundation activity"
+                 loading="lazy">
+
+            <figcaption>
+                Official Foundation photograph.
+            </figcaption>
+
+        </figure>
+
+
+        <figure class="gallery-item">
+
+            <img src="images/IMG-20260804-WA0024.jpg"
+                 alt="DAF Foundation activity"
+                 loading="lazy">
+
+            <figcaption>
+                Official Foundation photograph.
+            </figcaption>
+
+        </figure>
+
+
+        <figure class="gallery-item">
+
+            <img src="images/IMG-20260804-WA0027.jpg"
+                 alt="DAF Foundation activity"
+                 loading="lazy">
+
+            <figcaption>
+                Official Foundation photograph.
+            </figcaption>
+
+        </figure>
+
+
+        <figure class="gallery-item">
+
+            <img src="images/IMG-20260804-WA0028.jpg"
+                 alt="DAF Foundation activity"
+                 loading="lazy">
+
+            <figcaption>
+                Official Foundation photograph.
+            </figcaption>
+
+        </figure>
+
+
+        <figure class="gallery-item">
+
+            <img src="images/IMG-20260804-WA0029.jpg"
+                 alt="DAF Foundation activity"
+                 loading="lazy">
+
+            <figcaption>
+                Official Foundation photograph.
+            </figcaption>
+
+        </figure>
+
+
+        <figure class="gallery-item">
+
+            <img src="images/IMG-20260804-WA0036.jpg"
+                 alt="Youth-related Foundation photograph supplied by DAF Foundation"
+                 loading="lazy">
+
+            <figcaption>
+                Youth-related photograph supplied by the Foundation.
+            </figcaption>
+
+        </figure>
+
+
+        <figure class="gallery-item">
+
+            <img src="images/IMG-20260806-WA0000.jpg"
+                 alt="DAF Foundation activity"
+                 loading="lazy">
+
+            <figcaption>
+                Official Foundation photograph.
+            </figcaption>
+
+        </figure>
+
+
+        <figure class="gallery-item">
+
+            <img src="images/IMG-20260806-WA0001.jpg"
+                 alt="DAF Foundation activity"
+                 loading="lazy">
+
+            <figcaption>
+                Official Foundation photograph.
+            </figcaption>
+
+        </figure>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<section class="get-involved"
+         id="volunteer">
+
+<div class="container">
+
+    <div class="section-heading">
+
+        <span>
+            Get Involved
+        </span>
+
+        <h2>
+            Be Part of the Change
+        </h2>
+
+    </div>
+
+
+    <div class="involvement-grid">
+
+
+        <div class="involvement-card">
+
+            <i class="fas fa-hands-helping"></i>
+
+            <h3>
+                Volunteer
+            </h3>
+
+            <p>
+                Join opportunities to support community-focused activities and meaningful service.
+            </p>
+
+        </div>
+
+
+        <div class="involvement-card"
+             id="partner">
+
+            <i class="fas fa-handshake"></i>
+
+            <h3>
+                Partner With Us
+            </h3>
+
+            <p>
+                We welcome appropriate partnerships with organisations and individuals interested in supporting community development and humanitarian service.
+            </p>
 
             <a href="https://wa.me/2348060388776"
                class="btn btn-primary"
@@ -802,161 +1238,164 @@
 
             </a>
 
+        </div>
+
+
+        <div class="involvement-card">
+
+            <i class="fas fa-heart"></i>
+
+            <h3>
+                Support the Foundation
+            </h3>
+
+            <p>
+                To discuss ways of supporting the Foundation's work, please contact the Foundation through WhatsApp.
+            </p>
+
+            <a href="https://wa.me/2348060388776"
+               class="btn btn-primary"
+               target="_blank"
+               rel="noopener">
+
+                Contact Us
+
+            </a>
 
         </div>
 
 
     </div>
 
+</div>
 
 </section>
-
 
 
 
 <section class="youth-ambassador">
 
+<div class="container">
 
-    <div class="container">
+    <div class="section-heading">
+
+        <span>
+            Youth Leadership
+        </span>
+
+        <h2>
+            Bill Asekhame Youth Leadership Development Roadmap
+        </h2>
+
+    </div>
 
 
-        <div class="section-heading">
+    <div class="roadmap-introduction">
+
+        <p>
+            The Foundation's supplied material includes a youth leadership development roadmap focused on service, character, leadership, community engagement and personal development.
+        </p>
+
+        <p>
+            This section presents the supplied roadmap as Foundation material and does not constitute an independent assessment or validation by ACE™.
+        </p>
+
+    </div>
 
 
-            <span>
-                Meet Our Youth Ambassador
-            </span>
+    <div class="roadmap-years">
 
 
-            <h2>
-                Bill Asekhame Youth Leadership Development Roadmap (2027–2030)
-            </h2>
+        <div class="roadmap-card">
 
+            <h3>
+                Year One
+            </h3>
+
+            <p>
+                Foundation of Service — Learning, Character Building and Volunteerism.
+            </p>
 
         </div>
 
 
+        <div class="roadmap-card">
 
-        <div class="roadmap-introduction">
-
-
-            <p>
-                The Daniel Asekhame Foundation (DAF Foundation) is committed to nurturing young leaders who are passionate about service, compassion and sustainable community development.
-            </p>
-
-
+            <h3>
+                Year Two
+            </h3>
 
             <p>
-                This structured leadership development journey is designed to equip young people with the knowledge, skills and practical experience required to become respected humanitarian and community leaders.
+                Emerging Leadership — Leading Through Action.
             </p>
-
 
         </div>
 
 
+        <div class="roadmap-card">
 
-        <div class="roadmap-years">
+            <h3>
+                Year Three
+            </h3>
 
+            <p>
+                National Youth Leadership — Creating Lasting Community Impact.
+            </p>
 
-            <div class="roadmap-card">
-
-                <h3>
-                    Year One (Age 14–15)
-                </h3>
-
-                <p>
-                    Foundation of Service — Learning, Character Building and Volunteerism.
-                </p>
-
-            </div>
+        </div>
 
 
+        <div class="roadmap-card">
 
-            <div class="roadmap-card">
+            <h3>
+                Year Four
+            </h3>
 
-                <h3>
-                    Year Two (Age 15–16)
-                </h3>
-
-                <p>
-                    Emerging Leadership — Leading Through Action.
-                </p>
-
-            </div>
-
-
-
-            <div class="roadmap-card">
-
-                <h3>
-                    Year Three (Age 16–17)
-                </h3>
-
-                <p>
-                    National Youth Leadership — Creating Lasting Community Impact.
-                </p>
-
-            </div>
-
-
-
-            <div class="roadmap-card">
-
-                <h3>
-                    Year Four (Age 17–18)
-                </h3>
-
-                <p>
-                    Global Youth Leadership — Serving Communities Beyond Borders.
-                </p>
-
-            </div>
-
+            <p>
+                Global Youth Leadership — Serving Communities Beyond Borders.
+            </p>
 
         </div>
 
 
     </div>
 
+</div>
 
 </section>
 
+</main>
 
 
 
 <footer class="footer">
 
-
-    <div class="container">
-
-
-        <div class="footer-bottom">
+<div class="container">
 
 
-            <p>
-                © 2026 Daniel Asekhame Foundation (DAF Foundation). All Rights Reserved.
-            </p>
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Daniel Asekhame Foundation (DAF Foundation). All Rights Reserved.
+        </p>
 
 
+        <p class="ace-attribution">
 
-            <p>
+            <a href="https://omorishaoba-alt.github.io/ace-website/"
+               target="_blank"
+               rel="noopener">
 
-                <a href="https://omorishaoba-alt.github.io/ace-website/"
-                   target="_blank"
-                   rel="noopener">
+                Website Designed &amp; Developed by ACE™ — Enterprise Science™ for Enterprise Capability
 
-                    Website Designed & Developed by ACE™ — Enterprise Science™ for Enterprise Capability
+            </a>
 
-                </a>
-
-            </p>
-
-
-        </div>
-
+        </p>
 
     </div>
 
+
+</div>
 
 </footer>
 
@@ -964,8 +1403,6 @@
 
 <script src="script.js"></script>
 
-
 </body>
 
-
-</html>  
+</html>
