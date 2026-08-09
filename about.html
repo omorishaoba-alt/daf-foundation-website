@@ -1,1100 +1,1873 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<meta name="description"
-      content="About the Daniel Asekhame Foundation — its founder, vision, mission, values and commitment to transforming lives and strengthening communities across Nigeria.">
+    <meta
+        name="description"
+        content="About the Daniel Asekhame Foundation — its vision, mission, leadership, values and commitment to transforming lives across Nigeria.">
 
-<meta name="author"
-      content="Daniel Asekhame Foundation">
+    <meta
+        name="theme-color"
+        content="#075b35">
 
-<meta name="theme-color"
-      content="#157347">
+    <title>
+        About | Daniel Asekhame Foundation
+    </title>
 
-<title>
-    About | Daniel Asekhame Foundation
-</title>
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
 
-<link rel="preconnect"
-      href="https://fonts.googleapis.com">
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
 
-<link rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet">
+    <style>
 
-<link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        /* =========================================================
+           DAF FOUNDATION — ABOUT PAGE
+           CLEAN MVP PRESENTATION SYSTEM
+           ========================================================= */
 
-<link rel="stylesheet"
-      href="style.css">
+        :root {
+            --daf-green: #075b35;
+            --daf-green-dark: #043b24;
+            --daf-green-soft: #eaf5ef;
+            --daf-gold: #c99a18;
+            --daf-gold-soft: #f7efd1;
+            --daf-white: #ffffff;
+            --daf-ink: #17221d;
+            --daf-muted: #68736d;
+            --daf-line: #e4e9e6;
+            --daf-shadow: 0 18px 50px rgba(0, 0, 0, 0.08);
+            --radius: 18px;
+            --container: 1120px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", Arial, sans-serif;
+            background: #ffffff;
+            color: var(--daf-ink);
+            line-height: 1.7;
+            font-size: 16px;
+            overflow-x: hidden;
+        }
+
+        body.menu-open {
+            overflow: hidden;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button {
+            font: inherit;
+        }
+
+        .container {
+            width: min(100% - 32px, var(--container));
+            margin-inline: auto;
+        }
+
+
+        /* =========================================================
+           HEADER
+           ========================================================= */
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.97);
+            border-bottom: 1px solid var(--daf-line);
+            backdrop-filter: blur(12px);
+        }
+
+        .header-inner {
+            min-height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            min-width: 0;
+        }
+
+        .brand-mark {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+            border-radius: 50%;
+        }
+
+        .brand-copy {
+            min-width: 0;
+        }
+
+        .brand-name {
+            display: block;
+            color: var(--daf-green);
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 1.1;
+        }
+
+        .brand-tagline {
+            display: block;
+            margin-top: 2px;
+            color: var(--daf-muted);
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+
+
+        /* =========================================================
+           HAMBURGER
+           ========================================================= */
+
+        .menu-button {
+            width: 52px;
+            height: 52px;
+            flex: 0 0 52px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #d8e1dc;
+            border-radius: 14px;
+            background: var(--daf-white);
+            color: var(--daf-green);
+            cursor: pointer;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+            transition:
+                background 0.2s ease,
+                color 0.2s ease,
+                transform 0.2s ease;
+        }
+
+        .menu-button:hover,
+        .menu-button:focus-visible {
+            background: var(--daf-green);
+            color: white;
+            outline: none;
+        }
+
+        .menu-button:active {
+            transform: scale(0.96);
+        }
+
+        .hamburger-lines {
+            width: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .hamburger-lines span {
+            display: block;
+            width: 100%;
+            height: 3px;
+            border-radius: 3px;
+            background: currentColor;
+        }
+
+
+        /* =========================================================
+           MOBILE NAVIGATION DRAWER
+           ========================================================= */
+
+        .menu-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 1090;
+            background: rgba(3, 25, 16, 0.55);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.25s ease;
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 1100;
+            width: min(88vw, 390px);
+            height: 100dvh;
+            overflow-y: auto;
+            background: #ffffff;
+            box-shadow: -20px 0 60px rgba(0, 0, 0, 0.18);
+            transform: translateX(105%);
+            transition: transform 0.3s ease;
+        }
+
+        body.menu-open .mobile-menu {
+            transform: translateX(0);
+        }
+
+        body.menu-open .menu-overlay {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-menu-header {
+            min-height: 82px;
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--daf-line);
+            background: var(--daf-green);
+            color: white;
+        }
+
+        .mobile-menu-header h2 {
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 25px;
+        }
+
+        .close-menu {
+            width: 48px;
+            height: 48px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255,255,255,0.35);
+            border-radius: 12px;
+            background: transparent;
+            color: white;
+            font-size: 30px;
+            line-height: 1;
+            cursor: pointer;
+        }
+
+        .menu-section {
+            padding: 22px 20px;
+            border-bottom: 1px solid var(--daf-line);
+        }
+
+        .menu-section-label {
+            margin-bottom: 10px;
+            color: var(--daf-gold);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+        }
+
+        .menu-link {
+            display: flex;
+            align-items: center;
+            min-height: 48px;
+            padding: 8px 0;
+            color: var(--daf-ink);
+            font-size: 17px;
+            font-weight: 600;
+            border-bottom: 1px solid #f0f2f1;
+        }
+
+        .menu-link:last-child {
+            border-bottom: 0;
+        }
+
+        .menu-link:hover,
+        .menu-link:focus-visible {
+            color: var(--daf-green);
+            outline: none;
+        }
+
+
+        /* =========================================================
+           PAGE INTRO
+           ========================================================= */
+
+        .page-intro {
+            padding: 74px 0 52px;
+            background:
+                linear-gradient(
+                    135deg,
+                    #f5faf7 0%,
+                    #ffffff 60%
+                );
+        }
+
+        .eyebrow {
+            display: inline-block;
+            margin-bottom: 13px;
+            color: var(--daf-gold);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        .page-intro h1 {
+            max-width: 820px;
+            color: var(--daf-green-dark);
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: clamp(34px, 6vw, 58px);
+            line-height: 1.08;
+            font-weight: 700;
+        }
+
+        .page-intro p {
+            max-width: 760px;
+            margin-top: 18px;
+            color: var(--daf-muted);
+            font-size: 18px;
+        }
+
+
+        /* =========================================================
+           FOUNDER FEATURE
+           ========================================================= */
+
+        .founder-feature {
+            padding: 34px 0 80px;
+        }
+
+        .founder-card {
+            display: grid;
+            grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
+            overflow: hidden;
+            background: white;
+            border: 1px solid var(--daf-line);
+            border-radius: 24px;
+            box-shadow: var(--daf-shadow);
+        }
+
+        .founder-photo {
+            min-height: 520px;
+            background: var(--daf-green-soft);
+        }
+
+        .founder-photo img {
+            width: 100%;
+            height: 100%;
+            min-height: 520px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .founder-copy {
+            padding: clamp(28px, 5vw, 58px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .founder-label {
+            margin-bottom: 10px;
+            color: var(--daf-gold);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+        }
+
+        .founder-copy h2 {
+            color: var(--daf-green-dark);
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: clamp(30px, 4vw, 46px);
+            line-height: 1.12;
+        }
+
+        .founder-role {
+            margin-top: 8px;
+            color: var(--daf-green);
+            font-size: 17px;
+            font-weight: 700;
+        }
+
+        .founder-copy p {
+            margin-top: 20px;
+            color: var(--daf-muted);
+        }
+
+        .founder-button {
+            width: fit-content;
+            margin-top: 28px;
+            padding: 13px 19px;
+            border-radius: 10px;
+            background: var(--daf-green);
+            color: white;
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .founder-button:hover,
+        .founder-button:focus-visible {
+            background: var(--daf-green-dark);
+            outline: none;
+        }
+
+
+        /* =========================================================
+           CONTENT SECTIONS
+           ========================================================= */
+
+        .content-section {
+            padding: 78px 0;
+            border-top: 1px solid var(--daf-line);
+        }
+
+        .section-heading {
+            max-width: 760px;
+            margin-bottom: 32px;
+        }
+
+        .section-heading h2 {
+            color: var(--daf-green-dark);
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: clamp(29px, 4vw, 42px);
+            line-height: 1.15;
+        }
+
+        .section-heading p {
+            margin-top: 12px;
+            color: var(--daf-muted);
+        }
+
+        .prose {
+            max-width: 860px;
+        }
+
+        .prose p + p {
+            margin-top: 18px;
+        }
+
+        .prose strong {
+            color: var(--daf-green-dark);
+        }
+
+
+        /* =========================================================
+           VISION / MISSION
+           ========================================================= */
+
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .principle-card {
+            padding: 32px;
+            border: 1px solid var(--daf-line);
+            border-radius: var(--radius);
+            background: #ffffff;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.05);
+        }
+
+        .principle-card h3 {
+            color: var(--daf-green);
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 28px;
+        }
+
+        .principle-card p {
+            margin-top: 13px;
+            color: var(--daf-muted);
+        }
+
+
+        /* =========================================================
+           COLLAPSIBLE CONTENT
+           ========================================================= */
+
+        .accordion-stack {
+            display: grid;
+            gap: 14px;
+            max-width: 900px;
+        }
+
+        details {
+            overflow: hidden;
+            border: 1px solid var(--daf-line);
+            border-radius: 15px;
+            background: white;
+            box-shadow: 0 7px 25px rgba(0, 0, 0, 0.04);
+        }
+
+        summary {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            min-height: 68px;
+            padding: 16px 20px;
+            color: var(--daf-green-dark);
+            font-size: 17px;
+            font-weight: 700;
+            cursor: pointer;
+            list-style: none;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: "+";
+            flex: 0 0 auto;
+            width: 30px;
+            height: 30px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: var(--daf-green-soft);
+            color: var(--daf-green);
+            font-size: 22px;
+            font-weight: 500;
+        }
+
+        details[open] summary::after {
+            content: "−";
+            background: var(--daf-gold-soft);
+            color: #795d00;
+        }
+
+        .details-content {
+            padding: 0 20px 24px;
+            color: var(--daf-muted);
+        }
+
+        .details-content p + p {
+            margin-top: 15px;
+        }
+
+
+        /* =========================================================
+           VALUES
+           ========================================================= */
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+            max-width: 900px;
+        }
+
+        .value-item {
+            padding: 19px 20px;
+            border: 1px solid var(--daf-line);
+            border-radius: 13px;
+            background: #fbfcfb;
+            color: var(--daf-green-dark);
+            font-weight: 700;
+        }
+
+
+        /* =========================================================
+           CTA
+           ========================================================= */
+
+        .cta-section {
+            padding: 78px 0;
+            background: var(--daf-green);
+            color: white;
+        }
+
+        .cta-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .cta-inner h2 {
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: clamp(30px, 5vw, 46px);
+            line-height: 1.12;
+        }
+
+        .cta-inner p {
+            max-width: 650px;
+            margin-top: 12px;
+            color: rgba(255,255,255,0.82);
+        }
+
+        .cta-button {
+            flex: 0 0 auto;
+            padding: 14px 22px;
+            border-radius: 10px;
+            background: var(--daf-gold);
+            color: #17200f;
+            font-weight: 800;
+        }
+
+        .cta-button:hover,
+        .cta-button:focus-visible {
+            background: #dfb52c;
+            outline: none;
+        }
+
+
+        /* =========================================================
+           FOOTER
+           ========================================================= */
+
+        .site-footer {
+            background: #032c1b;
+            color: rgba(255,255,255,0.82);
+        }
+
+        .footer-main {
+            padding: 48px 0 30px;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 40px;
+        }
+
+        .footer-brand h2 {
+            color: white;
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 27px;
+        }
+
+        .footer-brand p {
+            max-width: 520px;
+            margin-top: 10px;
+        }
+
+        .footer-links h3 {
+            color: var(--daf-gold);
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+        }
+
+        .footer-links a {
+            display: block;
+            margin-top: 9px;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            padding: 18px 0;
+            border-top: 1px solid rgba(255,255,255,0.12);
+            font-size: 13px;
+        }
+
+        .ace-credit {
+            display: inline-block;
+            margin-top: 8px;
+            color: white;
+            font-weight: 600;
+        }
+
+        .ace-credit:hover {
+            color: var(--daf-gold);
+        }
+
+
+        /* =========================================================
+           TABLET
+           ========================================================= */
+
+        @media (max-width: 800px) {
+
+            .founder-card {
+                grid-template-columns: 1fr;
+            }
+
+            .founder-photo,
+            .founder-photo img {
+                min-height: 420px;
+            }
+
+            .principles-grid,
+            .values-grid,
+            .footer-main {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-inner {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+        }
+
+
+        /* =========================================================
+           PHONE
+           ========================================================= */
+
+        @media (max-width: 600px) {
+
+            body {
+                font-size: 16px;
+            }
+
+            .container {
+                width: min(100% - 24px, var(--container));
+            }
+
+            .header-inner {
+                min-height: 70px;
+            }
+
+            .brand-mark {
+                width: 43px;
+                height: 43px;
+            }
+
+            .brand-name {
+                font-size: 17px;
+            }
+
+            .brand-tagline {
+                font-size: 10px;
+            }
+
+            .menu-button {
+                width: 52px;
+                height: 52px;
+            }
+
+            .page-intro {
+                padding: 55px 0 38px;
+            }
+
+            .page-intro p {
+                font-size: 16px;
+            }
+
+            .founder-feature {
+                padding: 24px 0 55px;
+            }
+
+            .founder-photo,
+            .founder-photo img {
+                min-height: 360px;
+            }
+
+            .founder-copy {
+                padding: 28px 22px 32px;
+            }
+
+            .content-section {
+                padding: 55px 0;
+            }
+
+            .principle-card {
+                padding: 25px;
+            }
+
+            summary {
+                min-height: 64px;
+                padding: 14px 16px;
+                font-size: 16px;
+            }
+
+            .details-content {
+                padding: 0 16px 20px;
+            }
+
+            .cta-section {
+                padding: 58px 0;
+            }
+
+            .cta-button {
+                width: 100%;
+                text-align: center;
+            }
+
+            .footer-main {
+                padding: 40px 0 26px;
+            }
+
+        }
+
+
+        /* =========================================================
+           ACCESSIBILITY
+           ========================================================= */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                transition: none !important;
+            }
+
+        }
+
+    </style>
 
 </head>
 
+
 <body>
 
-<!-- =====================================================
-     HEADER
-===================================================== -->
 
-<header class="header">
+    <!-- =========================================================
+         HEADER
+         ========================================================= -->
 
-<div class="container">
+    <header class="site-header">
 
-    <a href="index.html"
-       class="logo"
-       aria-label="DAF Foundation Home">
+        <div class="container header-inner">
 
-        <img src="images/daf-logo.png"
-             alt="Daniel Asekhame Foundation">
+            <a
+                href="index.html"
+                class="brand"
+                aria-label="DAF Foundation Home">
 
-        <div class="logo-text">
+                <img
+                    src="images/IMG-20260803-WA0001(1).jpg"
+                    class="brand-mark"
+                    alt="Daniel Asekhame Foundation corporate logo">
 
-            <h1>
-                DAF Foundation
-            </h1>
+                <span class="brand-copy">
 
-            <span>
-                Transforming Lives
-            </span>
+                    <span class="brand-name">
+                        DAF Foundation
+                    </span>
 
-        </div>
+                    <span class="brand-tagline">
+                        Transforming Lives
+                    </span>
 
-    </a>
+                </span>
 
-
-    <div class="header-actions">
-
-        <a href="https://wa.me/2348060388776"
-           class="btn btn-primary"
-           target="_blank"
-           rel="noopener">
-
-            Connect
-
-        </a>
+            </a>
 
 
-        <button id="menu-toggle"
-                class="menu-toggle"
+            <button
+                class="menu-button"
+                id="menu-toggle"
                 type="button"
-                aria-label="Open navigation"
+                aria-label="Open navigation menu"
                 aria-expanded="false"
                 aria-controls="mobile-menu">
 
-            <i class="fas fa-bars"
-               aria-hidden="true">
-            </i>
+                <span class="hamburger-lines" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
 
-        </button>
+            </button>
 
-    </div>
+        </div>
 
-</div>
-
-</header>
-
-<!-- =====================================================
-     MOBILE NAVIGATION
-===================================================== -->
-
-<div class="menu-overlay"
-     id="menu-overlay"
-     aria-hidden="true">
-</div>
-
-<aside class="mobile-menu"
-       id="mobile-menu"
-       aria-hidden="true">
-
-<div class="mobile-menu-header">
-
-    <h2>
-        Navigation
-    </h2>
-
-    <button id="close-menu"
-            class="close-menu"
-            type="button"
-            aria-label="Close navigation">
-
-        &times;
-
-    </button>
-
-</div>
+    </header>
 
 
-<nav aria-label="Mobile Navigation">
+    <!-- =========================================================
+         MENU OVERLAY
+         ========================================================= -->
 
-
-    <div class="menu-section">
-
-        <h3>
-            HOME
-        </h3>
-
-        <a href="index.html">
-            Home
-        </a>
-
+    <div
+        class="menu-overlay"
+        id="menu-overlay"
+        aria-hidden="true">
     </div>
 
 
-    <div class="menu-section">
+    <!-- =========================================================
+         MOBILE NAVIGATION
+         ========================================================= -->
 
-        <h3>
-            ABOUT DAF
-        </h3>
+    <aside
+        class="mobile-menu"
+        id="mobile-menu"
+        aria-hidden="true">
 
-        <a href="about.html">
-            About the Foundation
-        </a>
+        <div class="mobile-menu-header">
 
-        <a href="#vision">
-            Vision &amp; Mission
-        </a>
+            <h2>
+                Navigation
+            </h2>
 
-        <a href="#founder">
-            Founder &amp; President
-        </a>
+            <button
+                class="close-menu"
+                id="close-menu"
+                type="button"
+                aria-label="Close navigation menu">
 
-        <a href="#values">
-            Core Values
-        </a>
+                &times;
 
-        <a href="#commitment">
-            Our Commitment
-        </a>
-
-    </div>
-
-
-    <div class="menu-section">
-
-        <h3>
-            OUR WORK
-        </h3>
-
-        <a href="programmes.html">
-            Programmes
-        </a>
-
-        <a href="programmes.html#focus">
-            Areas of Focus
-        </a>
-
-        <a href="programmes.html#impact">
-            Impact
-        </a>
-
-    </div>
-
-
-    <div class="menu-section">
-
-        <h3>
-            GET INVOLVED
-        </h3>
-
-        <a href="programmes.html#volunteer">
-            Volunteer
-        </a>
-
-        <a href="programmes.html#partner">
-            Partner With Us
-        </a>
-
-        <a href="https://wa.me/2348060388776"
-           target="_blank"
-           rel="noopener">
-
-            WhatsApp Enquiries
-
-        </a>
-
-    </div>
-
-
-    <div class="menu-section">
-
-        <h3>
-            CONNECT
-        </h3>
-
-        <a href="index.html#contact">
-            Contact
-        </a>
-
-        <a href="https://wa.me/2348060388776"
-           target="_blank"
-           rel="noopener">
-
-            WhatsApp
-
-        </a>
-
-    </div>
-
-</nav>
-
-</aside>
-
-<main>
-
-<!-- =====================================================
-     ABOUT INTRODUCTION
-===================================================== -->
-
-<section class="page-banner">
-
-<div class="container">
-
-    <span class="hero-tag">
-        About DAF Foundation
-    </span>
-
-    <h2>
-        Building Hope.
-        Empowering People.
-        Strengthening Communities.
-    </h2>
-
-    <p>
-        The Daniel Asekhame Foundation is built around a simple commitment:
-        to use service, compassion and purposeful action to improve lives.
-    </p>
-
-</div>
-
-</section>
-
-<!-- =====================================================
-     FOUNDATION OVERVIEW
-===================================================== -->
-
-<section class="about-section">
-
-<div class="container">
-
-    <div class="section-heading">
-
-        <span>
-            Who We Are
-        </span>
-
-        <h2>
-            Daniel Asekhame Foundation
-        </h2>
-
-    </div>
-
-
-    <div class="about-content-full">
-
-        <p>
-            Daniel Asekhame Foundation (DAF Foundation) is a non-profit,
-            humanitarian and community development organization dedicated
-            to transforming lives across Nigeria through impactful social
-            interventions.
-        </p>
-
-        <p>
-            The Foundation believes that sustainable development begins
-            with empowered people. Our programmes focus on providing hope,
-            opportunities, education, healthcare and protection to
-            vulnerable individuals while promoting inclusive growth within
-            communities.
-        </p>
-
-        <p>
-            We work with community leaders, educational institutions,
-            healthcare providers, government agencies, development
-            partners, volunteers and private organizations to deliver
-            meaningful and sustainable impact.
-        </p>
-
-        <p>
-            Our approach combines compassion, professionalism,
-            accountability, transparency and innovation to ensure that
-            every intervention contributes to lasting positive change.
-        </p>
-
-    </div>
-
-</div>
-
-</section>
-
-<!-- =====================================================
-     VISION & MISSION
-===================================================== -->
-
-<section class="vision-mission-page"
-         id="vision">
-
-<div class="container">
-
-    <div class="section-heading">
-
-        <span>
-            Direction
-        </span>
-
-        <h2>
-            Vision &amp; Mission
-        </h2>
-
-    </div>
-
-
-    <div class="vision-mission-grid">
-
-
-        <article class="vision-card">
-
-            <div class="section-icon">
-
-                <i class="fas fa-eye"
-                   aria-hidden="true">
-                </i>
-
-            </div>
-
-            <h3>
-                Our Vision
-            </h3>
-
-            <p>
-                To build a society where every individual, regardless of
-                background, has access to quality education, healthcare,
-                economic opportunities and protection from exploitation,
-                while promoting sustainable community development and
-                supporting research that transforms lives.
-            </p>
-
-        </article>
-
-
-        <article class="mission-card">
-
-            <div class="section-icon">
-
-                <i class="fas fa-bullseye"
-                   aria-hidden="true">
-                </i>
-
-            </div>
-
-            <h3>
-                Our Mission
-            </h3>
-
-            <p>
-                The Daniel Asekhame Foundation is committed to improving
-                lives through strategic interventions in community
-                development, healthcare, education, anti-human trafficking
-                advocacy, humanitarian support and research funding.
-            </p>
-
-            <p>
-                We partner with communities, government agencies,
-                educational institutions and development organizations
-                to create lasting solutions that empower individuals
-                and strengthen communities.
-            </p>
-
-        </article>
-
-    </div>
-
-</div>
-
-</section>
-
-<!-- =====================================================
-     FOUNDER
-===================================================== -->
-
-<section class="founder-section"
-         id="founder">
-
-<div class="container">
-
-    <div class="section-heading">
-
-        <span>
-            Leadership
-        </span>
-
-        <h2>
-            The Founder &amp; President
-        </h2>
-
-        <p>
-            The person at the centre of the Foundation's vision for
-            service to humanity.
-        </p>
-
-    </div>
-
-
-    <div class="founder-content">
-
-
-        <div class="founder-image">
-
-            <img src="images/founder.jpg"
-                 alt="Hon. Daniel Asekhame, Founder and President of Daniel Asekhame Foundation"
-                 loading="lazy">
+            </button>
 
         </div>
 
 
-        <div class="founder-biography">
-
-            <span class="hero-tag">
-                Founder &amp; President
-            </span>
-
-            <h3>
-                Hon. Daniel Asekhame
-            </h3>
-
-            <h4>
-                Public Servant • Community Development Advocate •
-                Philanthropist • Humanitarian
-            </h4>
-
-            <p>
-                Hon. Daniel Asekhame is a distinguished public servant,
-                community development advocate, philanthropist,
-                businessman and humanitarian whose life has been
-                dedicated to improving the welfare of individuals and
-                communities.
-            </p>
-
-            <p>
-                A native of Owan West Local Government Area of Edo State,
-                Nigeria, Hon. Asekhame has devoted much of his career to
-                promoting good governance, community empowerment, youth
-                development and social inclusion.
-            </p>
+        <nav aria-label="Main Navigation">
 
 
-            <details class="content-reveal">
+            <div class="menu-section">
 
-                <summary>
-                    Read His Story
-                    <i class="fas fa-chevron-down"
-                       aria-hidden="true">
-                    </i>
-                </summary>
+                <div class="menu-section-label">
+                    HOME
+                </div>
+
+                <a
+                    class="menu-link"
+                    href="index.html">
+
+                    Home
+
+                </a>
+
+            </div>
 
 
-                <div class="content-reveal-body">
+            <div class="menu-section">
+
+                <div class="menu-section-label">
+                    ABOUT DAF
+                </div>
+
+                <a
+                    class="menu-link"
+                    href="#foundation">
+
+                    About the Foundation
+
+                </a>
+
+                <a
+                    class="menu-link"
+                    href="#vision">
+
+                    Vision & Mission
+
+                </a>
+
+                <a
+                    class="menu-link"
+                    href="#founder">
+
+                    Founder & President
+
+                </a>
+
+                <a
+                    class="menu-link"
+                    href="#values">
+
+                    Core Values
+
+                </a>
+
+                <a
+                    class="menu-link"
+                    href="#accountability">
+
+                    Accountability
+
+                </a>
+
+            </div>
+
+
+            <div class="menu-section">
+
+                <div class="menu-section-label">
+                    OUR WORK
+                </div>
+
+                <a
+                    class="menu-link"
+                    href="programmes.html">
+
+                    Our Work
+
+                </a>
+
+                <a
+                    class="menu-link"
+                    href="programmes.html#focus">
+
+                    Areas of Focus
+
+                </a>
+
+                <a
+                    class="menu-link"
+                    href="programmes.html#impact">
+
+                    Impact
+
+                </a>
+
+            </div>
+
+
+            <div class="menu-section">
+
+                <div class="menu-section-label">
+                    GET INVOLVED
+                </div>
+
+                <a
+                    class="menu-link"
+                    href="programmes.html#volunteer">
+
+                    Volunteer
+
+                </a>
+
+                <a
+                    class="menu-link"
+                    href="programmes.html#partner">
+
+                    Partner With Us
+
+                </a>
+
+                <a
+                    class="menu-link"
+                    href="https://wa.me/2348060388776"
+                    target="_blank"
+                    rel="noopener">
+
+                    WhatsApp Enquiries
+
+                </a>
+
+            </div>
+
+
+            <div class="menu-section">
+
+                <div class="menu-section-label">
+                    CONNECT
+                </div>
+
+                <a
+                    class="menu-link"
+                    href="index.html#contact">
+
+                    Contact
+
+                </a>
+
+                <a
+                    class="menu-link"
+                    href="https://wa.me/2348060388776"
+                    target="_blank"
+                    rel="noopener">
+
+                    WhatsApp
+
+                </a>
+
+            </div>
+
+        </nav>
+
+    </aside>
+
+
+    <main>
+
+
+        <!-- =====================================================
+             PAGE INTRO
+             ===================================================== -->
+
+        <section class="page-intro">
+
+            <div class="container">
+
+                <span class="eyebrow">
+                    About DAF Foundation
+                </span>
+
+                <h1>
+                    Building hope, empowering people and strengthening communities.
+                </h1>
+
+                <p>
+                    The Daniel Asekhame Foundation is committed to transforming lives through compassionate service, strategic intervention and sustainable community development across Nigeria.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             FOUNDER
+             ===================================================== -->
+
+        <section
+            class="founder-feature"
+            id="founder">
+
+            <div class="container">
+
+                <div class="founder-card">
+
+                    <div class="founder-photo">
+
+                        <img
+                            src="images/IMG-20260803-WA0003.jpg"
+                            alt="Founder and President of the Daniel Asekhame Foundation"
+                            loading="eager">
+
+                    </div>
+
+
+                    <div class="founder-copy">
+
+                        <span class="founder-label">
+                            Founder & President
+                        </span>
+
+                        <h2>
+                            Hon. Daniel Asekhame
+                        </h2>
+
+                        <div class="founder-role">
+                            Founder & President, Daniel Asekhame Foundation
+                        </div>
+
+                        <p>
+                            Hon. Daniel Asekhame is a distinguished public servant, community development advocate, philanthropist, businessman and humanitarian whose life has been dedicated to improving the welfare of individuals and communities.
+                        </p>
+
+                        <a
+                            href="#leadership"
+                            class="founder-button">
+
+                            Discover His Leadership
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             FOUNDATION
+             ===================================================== -->
+
+        <section
+            class="content-section"
+            id="foundation">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="eyebrow">
+                        The Foundation
+                    </span>
+
+                    <h2>
+                        About Daniel Asekhame Foundation
+                    </h2>
+
+                </div>
+
+
+                <div class="prose">
 
                     <p>
-                        He served as Chairman of Owan West Local
-                        Government, where he was first appointed for one
-                        term and subsequently elected for two terms.
-                        During his tenure, he promoted people-oriented
-                        programmes, strengthened community participation
-                        in governance and supported initiatives aimed at
-                        sustainable local development.
+                        Daniel Asekhame Foundation (DAF Foundation) is a non-profit, humanitarian and community development organization dedicated to transforming lives across Nigeria through impactful social interventions.
                     </p>
 
                     <p>
-                        Hon. Asekhame holds a Bachelor of Science (B.Sc.)
-                        degree from Ambrose Alli University, Ekpoma, and
-                        a Master of Science (M.Sc.) degree from the
-                        University of Benin. He is also a certified
-                        Project Management Professional (PMP).
+                        The Foundation believes that sustainable development begins with empowered people. Our programmes focus on providing hope, opportunities, education, healthcare and protection to vulnerable individuals while promoting inclusive growth within communities.
                     </p>
 
                     <p>
-                        Beyond politics and public service, he is an
-                        accomplished entrepreneur and the Chief Executive
-                        Officer of Dase Kingsgate Ltd and Landlion Haulage
-                        Ltd. His business experience has reinforced his
-                        belief that economic empowerment, entrepreneurship
-                        and job creation are essential tools for reducing
-                        poverty and promoting sustainable development.
+                        We work with community leaders, educational institutions, healthcare providers, government agencies, development partners, volunteers and private organizations to deliver measurable and sustainable impact.
                     </p>
 
                     <p>
-                        His passion for sports also earned him recognition
-                        as the former Chairman of the Edo State Volleyball
-                        Association, where he contributed to the growth
-                        and development of volleyball and youth
-                        participation in sports across the state.
-                    </p>
-
-                    <p>
-                        In recognition of his outstanding service to
-                        humanity and community development, Hon. Daniel
-                        Asekhame has received more than thirty awards and
-                        honours from professional bodies, civic
-                        organizations, religious institutions, youth
-                        groups and community associations. He is also a
-                        recipient of the prestigious Rotary International
-                        Paul Harris Fellow (PHF) Award.
-                    </p>
-
-                    <p>
-                        As Founder and President of the Daniel Asekhame
-                        Foundation, he provides strategic leadership for
-                        programmes focused on community development,
-                        healthcare, education, anti-human trafficking
-                        advocacy, humanitarian assistance, youth and
-                        women empowerment and research funding.
-                    </p>
-
-                    <p>
-                        Hon. Daniel Asekhame firmly believes that true
-                        leadership is measured not by positions held but
-                        by the number of lives positively impacted. His
-                        vision is to build a Foundation that serves as a
-                        beacon of hope, promotes equal opportunities,
-                        supports innovation and research, and leaves a
-                        lasting legacy of compassion, service and
-                        transformational leadership for future
-                        generations.
+                        Our approach combines compassion, professionalism, accountability, transparency and innovation to ensure that every intervention produces meaningful and lasting change.
                     </p>
 
                 </div>
 
-            </details>
+            </div>
 
-        </div>
+        </section>
 
-    </div>
 
-</div>
+        <!-- =====================================================
+             VISION & MISSION
+             ===================================================== -->
 
-</section>
+        <section
+            class="content-section"
+            id="vision">
 
-<!-- =====================================================
-     CORE VALUES
-===================================================== -->
+            <div class="container">
 
-<section class="values-summary"
-         id="values">
+                <div class="section-heading">
 
-<div class="container">
+                    <span class="eyebrow">
+                        Direction
+                    </span>
 
-    <div class="section-heading">
+                    <h2>
+                        Vision & Mission
+                    </h2>
 
-        <span>
-            Our Values
-        </span>
+                    <p>
+                        The principles that establish the Foundation's direction and purpose.
+                    </p>
 
-        <h2>
-            Principles That Guide Our Service
-        </h2>
+                </div>
 
-        <p>
-            The Foundation's work is guided by principles that place
-            people, dignity, responsibility and meaningful impact at
-            the centre of service.
-        </p>
 
-    </div>
+                <div class="principles-grid">
 
 
-    <div class="values-list">
+                    <article class="principle-card">
 
+                        <h3>
+                            Our Vision
+                        </h3>
 
-        <details class="value-item">
+                        <p>
+                            To build a society where every individual, regardless of background, has access to quality education, healthcare, economic opportunities and protection from exploitation, while promoting sustainable community development and supporting research that transforms lives.
+                        </p>
 
-            <summary>
-                Integrity
-                <i class="fas fa-plus"
-                   aria-hidden="true">
-                </i>
-            </summary>
+                    </article>
 
-            <p>
-                We are committed to honesty, fairness, ethical conduct
-                and respect in all our actions and decisions.
-            </p>
 
-        </details>
+                    <article class="principle-card">
 
+                        <h3>
+                            Our Mission
+                        </h3>
 
-        <details class="value-item">
+                        <p>
+                            The Daniel Asekhame Foundation is committed to improving lives through strategic interventions in community development, healthcare, education, anti-human trafficking advocacy, humanitarian support and research funding.
+                        </p>
 
-            <summary>
-                Accountability
-                <i class="fas fa-plus"
-                   aria-hidden="true">
-                </i>
-            </summary>
+                        <p>
+                            We partner with communities, government agencies, educational institutions and development organizations to create lasting solutions that empower individuals and strengthen communities.
+                        </p>
 
-            <p>
-                We accept responsibility for our actions, programmes
-                and commitments while maintaining transparency with
-                our beneficiaries, partners and communities.
-            </p>
+                    </article>
 
-        </details>
 
+                </div>
 
-        <details class="value-item">
+            </div>
 
-            <summary>
-                Compassion
-                <i class="fas fa-plus"
-                   aria-hidden="true">
-                </i>
-            </summary>
+        </section>
 
-            <p>
-                We serve with empathy, kindness and genuine concern
-                for the welfare and dignity of others.
-            </p>
 
-        </details>
+        <!-- =====================================================
+             LEADERSHIP
+             ===================================================== -->
 
+        <section
+            class="content-section"
+            id="leadership">
 
-        <details class="value-item">
+            <div class="container">
 
-            <summary>
-                Transparency
-                <i class="fas fa-plus"
-                   aria-hidden="true">
-                </i>
-            </summary>
+                <div class="section-heading">
 
-            <p>
-                We believe openness and responsible communication are
-                essential to building lasting trust.
-            </p>
+                    <span class="eyebrow">
+                        Leadership
+                    </span>
 
-        </details>
+                    <h2>
+                        The Founder & President
+                    </h2>
 
+                </div>
 
-        <details class="value-item">
 
-            <summary>
-                Excellence
-                <i class="fas fa-plus"
-                   aria-hidden="true">
-                </i>
-            </summary>
+                <div class="accordion-stack">
 
-            <p>
-                We pursue high standards of professionalism, quality,
-                innovation and continuous improvement.
-            </p>
 
-        </details>
+                    <details open>
 
+                        <summary>
+                            Public Service & Community Leadership
+                        </summary>
 
-        <details class="value-item">
+                        <div class="details-content">
 
-            <summary>
-                Inclusion
-                <i class="fas fa-plus"
-                   aria-hidden="true">
-                </i>
-            </summary>
+                            <p>
+                                A native of Owan West Local Government Area of Edo State, Nigeria, Hon. Asekhame has devoted much of his career to promoting good governance, community empowerment, youth development and social inclusion.
+                            </p>
 
-            <p>
-                We believe everyone deserves an opportunity to
-                participate, contribute and thrive.
-            </p>
+                            <p>
+                                He served as Chairman of Owan West Local Government, where he was first appointed for one term and subsequently elected for two terms. During his tenure, he promoted people-oriented programmes, strengthened community participation in governance and supported initiatives aimed at sustainable local development.
+                            </p>
 
-        </details>
+                        </div>
 
+                    </details>
 
-        <details class="value-item">
 
-            <summary>
-                Service to Humanity
-                <i class="fas fa-plus"
-                   aria-hidden="true">
-                </i>
-            </summary>
+                    <details>
 
-            <p>
-                Service to humanity is central to our purpose and
-                informs the way we design and deliver our work.
-            </p>
+                        <summary>
+                            Education & Professional Development
+                        </summary>
 
-        </details>
+                        <div class="details-content">
 
+                            <p>
+                                Hon. Asekhame holds a Bachelor of Science (B.Sc.) degree from Ambrose Alli University, Ekpoma, and a Master of Science (M.Sc.) degree from the University of Benin.
+                            </p>
 
-        <details class="value-item">
+                            <p>
+                                He is also a certified Project Management Professional (PMP).
+                            </p>
 
-            <summary>
-                Respect for Human Dignity
-                <i class="fas fa-plus"
-                   aria-hidden="true">
-                </i>
-            </summary>
+                        </div>
 
-            <p>
-                Every person deserves dignity, respect and compassionate
-                treatment regardless of background or circumstance.
-            </p>
+                    </details>
 
-        </details>
 
+                    <details>
 
-        <details class="value-item">
+                        <summary>
+                            Entrepreneurship & Economic Empowerment
+                        </summary>
 
-            <summary>
-                Innovation
-                <i class="fas fa-plus"
-                   aria-hidden="true">
-                </i>
-            </summary>
+                        <div class="details-content">
 
-            <p>
-                We encourage creative thinking, appropriate technology
-                and evidence-based solutions to social challenges.
-            </p>
+                            <p>
+                                Beyond politics and public service, he is an accomplished entrepreneur and the Chief Executive Officer of Dase Kingsgate Ltd and Landlion Haulage Ltd.
+                            </p>
 
-        </details>
+                            <p>
+                                His business experience has reinforced his belief that economic empowerment, entrepreneurship and job creation are essential tools for reducing poverty and promoting sustainable development.
+                            </p>
 
+                        </div>
 
-        <details class="value-item">
+                    </details>
 
-            <summary>
-                Sustainable Development
-                <i class="fas fa-plus"
-                   aria-hidden="true">
-                </i>
-            </summary>
 
-            <p>
-                We seek solutions that create meaningful benefits today
-                while strengthening opportunities for future generations.
-            </p>
+                    <details>
 
-        </details>
+                        <summary>
+                            Sports & Youth Development
+                        </summary>
 
+                        <div class="details-content">
 
-    </div>
+                            <p>
+                                His passion for sports also earned him recognition as the former Chairman of the Edo State Volleyball Association, where he contributed to the growth and development of volleyball and youth participation in sports across the state.
+                            </p>
 
-</div>
+                        </div>
 
-</section>
+                    </details>
 
-<!-- =====================================================
-     ACCOUNTABILITY
-===================================================== -->
 
-<section class="accountability-section"
-         id="commitment">
+                    <details>
 
-<div class="container">
+                        <summary>
+                            Recognition & Service to Humanity
+                        </summary>
 
-    <div class="section-heading">
+                        <div class="details-content">
 
-        <span>
-            Our Commitment
-        </span>
+                            <p>
+                                In recognition of his outstanding service to humanity and community development, Hon. Daniel Asekhame has received more than thirty awards and honours from professional bodies, civic organizations, religious institutions, youth groups and community associations.
+                            </p>
 
-        <h2>
-            Accountability
-        </h2>
+                            <p>
+                                He is also a recipient of the prestigious Rotary International Paul Harris Fellow (PHF) Award.
+                            </p>
 
-    </div>
+                        </div>
 
+                    </details>
 
-    <div class="commitment-content">
 
-        <p>
-            At the Daniel Asekhame Foundation, accountability is one of
-            our core values. We are committed to managing all resources
-            with honesty, integrity and transparency.
-        </p>
+                    <details>
 
+                        <summary>
+                            His Foundation Leadership
+                        </summary>
 
-        <details class="content-reveal">
+                        <div class="details-content">
 
-            <summary>
-                Our Accountability Commitment
-                <i class="fas fa-chevron-down"
-                   aria-hidden="true">
-                </i>
-            </summary>
+                            <p>
+                                As Founder and President of the Daniel Asekhame Foundation, he provides strategic leadership for programmes focused on community development, healthcare, education, anti-human trafficking advocacy, humanitarian assistance, youth and women empowerment and research funding.
+                            </p>
 
+                            <p>
+                                Hon. Daniel Asekhame firmly believes that true leadership is measured not by positions held but by the number of lives positively impacted.
+                            </p>
 
-            <div class="content-reveal-body">
+                            <p>
+                                His vision is to build a Foundation that serves as a beacon of hope, promotes equal opportunities, supports innovation and research, and leaves a lasting legacy of compassion, service and transformational leadership for future generations.
+                            </p>
+
+                        </div>
+
+                    </details>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ACCOUNTABILITY
+             ===================================================== -->
+
+        <section
+            class="content-section"
+            id="accountability">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="eyebrow">
+                        Our Commitment
+                    </span>
+
+                    <h2>
+                        Accountability
+                    </h2>
+
+                </div>
+
+
+                <div class="prose">
+
+                    <p>
+                        At the Daniel Asekhame Foundation, accountability is one of our core values. We are committed to managing all resources with honesty, integrity and transparency.
+                    </p>
+
+                    <p>
+                        Every donation, partnership and contribution entrusted to us is used responsibly to achieve meaningful and measurable impact in the communities we serve.
+                    </p>
+
+                    <p>
+                        We maintain high standards of financial stewardship, ethical governance and regular reporting to ensure that our beneficiaries, partners, donors and stakeholders have confidence in our work.
+                    </p>
+
+                    <p>
+                        Through openness and responsible leadership, we strive to earn and sustain the trust of everyone who supports our mission.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CORE VALUES
+             ===================================================== -->
+
+        <section
+            class="content-section"
+            id="values">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="eyebrow">
+                        Core Values
+                    </span>
+
+                    <h2>
+                        The Principles That Guide Our Service
+                    </h2>
+
+                    <p>
+                        DAF Foundation is guided by principles that place people, dignity, responsible leadership and sustainable impact at the centre of our work.
+                    </p>
+
+                </div>
+
+
+                <div class="values-grid">
+
+                    <div class="value-item">
+                        Integrity
+                    </div>
+
+                    <div class="value-item">
+                        Accountability
+                    </div>
+
+                    <div class="value-item">
+                        Compassion
+                    </div>
+
+                    <div class="value-item">
+                        Transparency
+                    </div>
+
+                    <div class="value-item">
+                        Excellence
+                    </div>
+
+                    <div class="value-item">
+                        Inclusion
+                    </div>
+
+                    <div class="value-item">
+                        Service to Humanity
+                    </div>
+
+                    <div class="value-item">
+                        Respect for Human Dignity
+                    </div>
+
+                    <div class="value-item">
+                        Innovation
+                    </div>
+
+                    <div class="value-item">
+                        Sustainable Development
+                    </div>
+
+                </div>
+
+
+                <div class="accordion-stack" style="margin-top: 22px;">
+
+                    <details>
+
+                        <summary>
+                            Integrity in Practice
+                        </summary>
+
+                        <div class="details-content">
+
+                            <p>
+                                Integrity is the foundation of everything we do at the Daniel Asekhame Foundation. We are committed to honesty, fairness, ethical conduct and respect in all our actions and decisions.
+                            </p>
+
+                            <p>
+                                We uphold high standards of professionalism, ensuring that our programmes and partnerships are guided by transparency, responsibility and a genuine commitment to serving humanity.
+                            </p>
+
+                        </div>
+
+                    </details>
+
+
+                    <details>
+
+                        <summary>
+                            Our Wider Principles
+                        </summary>
+
+                        <div class="details-content">
+
+                            <p>
+                                DAF Foundation is guided by integrity, accountability, compassion, transparency, excellence, inclusion, service to humanity, respect for human dignity, innovation and sustainable development.
+                            </p>
+
+                        </div>
+
+                    </details>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             GET INVOLVED
+             ===================================================== -->
+
+        <section class="cta-section">
+
+            <div class="container cta-inner">
+
+                <div>
+
+                    <h2>
+                        Join Us in Transforming Lives
+                    </h2>
+
+                    <p>
+                        Together, we can strengthen communities, empower individuals and create sustainable positive change across Nigeria.
+                    </p>
+
+                </div>
+
+
+                <a
+                    class="cta-button"
+                    href="https://wa.me/2348060388776"
+                    target="_blank"
+                    rel="noopener">
+
+                    Get Involved
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
+
+    <footer class="site-footer">
+
+        <div class="container footer-main">
+
+
+            <div class="footer-brand">
+
+                <h2>
+                    Daniel Asekhame Foundation
+                </h2>
 
                 <p>
-                    Every donation, partnership and contribution entrusted
-                    to us is used responsibly to achieve meaningful and
-                    measurable impact in the communities we serve.
-                </p>
-
-                <p>
-                    We maintain high standards of financial stewardship,
-                    ethical governance and responsible leadership to
-                    ensure that our beneficiaries, partners, donors and
-                    stakeholders can have confidence in our work.
-                </p>
-
-                <p>
-                    Through openness, responsible management and a
-                    commitment to service, we strive to earn and sustain
-                    the trust of everyone who supports our mission.
+                    Transforming lives through compassion, service and sustainable community development.
                 </p>
 
             </div>
 
-        </details>
 
-    </div>
+            <div class="footer-links">
 
-</div>
+                <h3>
+                    Quick Links
+                </h3>
 
-</section>
+                <a href="index.html">
+                    Home
+                </a>
 
-<!-- =====================================================
-     GET INVOLVED
-===================================================== -->
+                <a href="about.html">
+                    About DAF
+                </a>
 
-<section class="get-involved">
+                <a href="programmes.html">
+                    Our Work
+                </a>
 
-<div class="container">
+                <a href="index.html#contact">
+                    Contact
+                </a>
 
-    <div class="section-heading">
+                <a
+                    href="https://wa.me/2348060388776"
+                    target="_blank"
+                    rel="noopener">
 
-        <span>
-            Get Involved
-        </span>
+                    WhatsApp
 
-        <h2>
-            Join Us In Transforming Lives
-        </h2>
+                </a>
 
-        <p>
-            There are many ways to support the work of the Daniel
-            Asekhame Foundation.
-        </p>
+            </div>
 
-    </div>
-
-
-    <div class="involvement-grid">
-
-
-        <article class="involvement-card">
-
-            <i class="fas fa-hands-helping"
-               aria-hidden="true">
-            </i>
-
-            <h3>
-                Volunteer
-            </h3>
-
-            <p>
-                Join meaningful community initiatives and contribute
-                your time and skills.
-            </p>
-
-            <a href="programmes.html#volunteer"
-               class="btn btn-primary">
-
-                Volunteer
-
-            </a>
-
-        </article>
-
-
-        <article class="involvement-card">
-
-            <i class="fas fa-handshake"
-               aria-hidden="true">
-            </i>
-
-            <h3>
-                Partner
-            </h3>
-
-            <p>
-                Work with DAF Foundation to develop practical solutions
-                that strengthen communities.
-            </p>
-
-            <a href="programmes.html#partner"
-               class="btn btn-primary">
-
-                Partner
-
-            </a>
-
-        </article>
-
-
-        <article class="involvement-card">
-
-            <i class="fas fa-heart"
-               aria-hidden="true">
-            </i>
-
-            <h3>
-                Support
-            </h3>
-
-            <p>
-                Support the Foundation's humanitarian and community
-                development work.
-            </p>
-
-            <a href="https://wa.me/2348060388776"
-               class="btn btn-primary"
-               target="_blank"
-               rel="noopener">
-
-                Contact Us
-
-            </a>
-
-        </article>
-
-
-    </div>
-
-</div>
-
-</section>
-
-</main>
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
-<footer class="footer">
-
-<div class="container">
-
-    <div class="footer-grid">
-
-
-        <div class="footer-brand">
-
-            <h2>
-                Daniel Asekhame Foundation
-            </h2>
-
-            <p>
-                Transforming lives through compassion, service and
-                sustainable community development.
-            </p>
 
         </div>
 
 
-        <div class="footer-links">
+        <div class="container footer-bottom">
 
-            <h3>
-                Quick Links
-            </h3>
+            <p>
+                © 2026 Daniel Asekhame Foundation (DAF Foundation). All Rights Reserved.
+            </p>
 
-            <ul>
+            <a
+                class="ace-credit"
+                href="https://omorishaoba-alt.github.io/ace-website/"
+                target="_blank"
+                rel="noopener">
 
-                <li>
-                    <a href="index.html">
-                        Home
-                    </a>
-                </li>
-
-                <li>
-                    <a href="about.html">
-                        About DAF
-                    </a>
-                </li>
-
-                <li>
-                    <a href="programmes.html">
-                        Our Work
-                    </a>
-                </li>
-
-                <li>
-                    <a href="index.html#contact">
-                        Contact
-                    </a>
-                </li>
-
-            </ul>
-
-        </div>
-
-
-        <div class="footer-links">
-
-            <h3>
-                Connect
-            </h3>
-
-            <ul>
-
-                <li>
-                    Benin City, Edo State, Nigeria
-                </li>
-
-                <li>
-                    <a href="https://wa.me/2348060388776"
-                       target="_blank"
-                       rel="noopener">
-
-                        WhatsApp: 08060388776
-
-                    </a>
-                </li>
-
-            </ul>
-
-        </div>
-
-    </div>
-
-
-    <div class="footer-bottom">
-
-        <p>
-            © 2026 Daniel Asekhame Foundation (DAF Foundation).
-            All Rights Reserved.
-        </p>
-
-        <p>
-
-            <a href="https://omorishaoba-alt.github.io/ace-website/"
-               target="_blank"
-               rel="noopener">
-
-                Website Designed &amp; Developed by ACE™ —
-                Enterprise Science™ for Enterprise Capability
+                Website Designed & Developed by ACE™ — Enterprise Science™ for Enterprise Capability
 
             </a>
 
-        </p>
+        </div>
 
-    </div>
+    </footer>
 
-</div>
 
-</footer>
+    <!-- =========================================================
+         NAVIGATION SCRIPT
+         ========================================================= -->
 
-<script src="script.js"></script>
+    <script>
+
+        (function () {
+
+            const body = document.body;
+
+            const menuToggle =
+                document.getElementById("menu-toggle");
+
+            const closeMenu =
+                document.getElementById("close-menu");
+
+            const mobileMenu =
+                document.getElementById("mobile-menu");
+
+            const menuOverlay =
+                document.getElementById("menu-overlay");
+
+
+            function openMenu() {
+
+                body.classList.add("menu-open");
+
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    "true"
+                );
+
+                mobileMenu.setAttribute(
+                    "aria-hidden",
+                    "false"
+                );
+
+                menuOverlay.setAttribute(
+                    "aria-hidden",
+                    "false"
+                );
+
+            }
+
+
+            function closeNavigation() {
+
+                body.classList.remove("menu-open");
+
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+                mobileMenu.setAttribute(
+                    "aria-hidden",
+                    "true"
+                );
+
+                menuOverlay.setAttribute(
+                    "aria-hidden",
+                    "true"
+                );
+
+            }
+
+
+            menuToggle.addEventListener(
+                "click",
+                openMenu
+            );
+
+
+            closeMenu.addEventListener(
+                "click",
+                closeNavigation
+            );
+
+
+            menuOverlay.addEventListener(
+                "click",
+                closeNavigation
+            );
+
+
+            document
+                .querySelectorAll(".menu-link")
+                .forEach(function (link) {
+
+                    link.addEventListener(
+                        "click",
+                        closeNavigation
+                    );
+
+                });
+
+
+            document.addEventListener(
+                "keydown",
+                function (event) {
+
+                    if (
+                        event.key === "Escape" &&
+                        body.classList.contains("menu-open")
+                    ) {
+
+                        closeNavigation();
+
+                    }
+
+                }
+            );
+
+
+        })();
+
+    </script>
+
 
 </body>
 
